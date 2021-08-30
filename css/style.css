@@ -143,4 +143,10 @@ body {
   font-weight: 600;
 }
 
+.linea-verde {
+  height: 0.05rem;
+  width: 1.5rem;
+  background-color: #38866d;
+}
+
 /*# sourceMappingURL=style.css.map */
