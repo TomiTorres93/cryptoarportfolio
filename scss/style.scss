@@ -1,0 +1,157 @@
+
+
+@import '../scss/funciones/mixins';
+@import '../scss/funciones/extends';
+
+body {
+    padding: 0;
+    margin: 0 auto;
+    background: rgb(56,134,109);
+    background: linear-gradient(180deg, rgba(56,134,109,1) 16%, rgba(29,22,47,1) 80%);
+    background-size: contain;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    height: 50vw;
+}
+
+.navbar {
+    height: 5vw;
+
+}
+
+.web-body {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5vw;
+    height: 35vw;
+}
+
+.top-bar {
+    height: 1vw;
+    background-color: white;
+    color: rgb(56,134,109);
+    font-size: 0.7rem;
+    padding: 0.3vw 1vw;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: 200;
+    color: white;
+ }
+
+ .titulo2 {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    position: relative;
+    bottom: 3rem;
+ }
+
+ .portfolio-container {
+    @extend %flexbox-row;
+    justify-content: space-around;
+     width: 70%;
+     height: 60%;
+     background-color: rgb(255, 255, 255);
+     color: rgb(56,134,109);
+     transition: all 1s;
+     animation: changeBorder 10s infinite;
+     animation-name: changeBorder;
+
+     @keyframes changeBorder {
+
+         0% {
+            border: rgb(124, 236, 201) solid 2px;
+         }
+
+         10% {
+            border: rgb(81, 56, 145) solid 2px;
+        }
+
+         20% {
+            border: rgb(124, 236, 201) solid 2px;
+                }
+
+         30% {
+            border: rgb(81, 56, 145) solid 2px;
+        }
+
+         40% {
+            border: rgb(124, 236, 201) solid 2px;
+         }
+
+         50% {
+            border: rgb(81, 56, 145) solid 2px;
+        }
+         
+         60% {
+            border: rgb(124, 236, 201) solid 2px;
+         }
+
+         70% {
+            border: rgb(81, 56, 145) solid 2px;
+        }
+
+         80% {
+            border: rgb(124, 236, 201) solid 2px;
+         }
+
+         90% {
+            border: rgb(81, 56, 145) solid 2px;
+        }
+         
+         100% {
+            border: rgb(124, 236, 201) solid 2px;
+         }
+
+ }
+
+}
+
+.portfolio-sections {
+    @extend %flexbox-columna;
+    text-align: center;
+    align-items: center;
+}
+
+.coin-img {
+    height: 1vw;
+}
+
+.boton-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 2vw;
+    height: 1.6vw;
+    margin: 0.7vw 0vw;
+
+
+}
+
+.boton-acciones {
+    padding-top: 0.4vw;
+    color: rgb(56,134,109);
+    background-color: white;
+    width: 2vw;
+    height: 1.6vw;
+    transition: 1s all;
+
+    &:hover {
+        background-color: rgb(56,134,109);
+        color: white;
+    }
+    
+}
+
+.subtit {
+    font-weight: 600;
+}
