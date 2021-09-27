@@ -21,80 +21,78 @@
 
     <title>Tu portfolio crypto argento</title>
 </head>
-<body>
+<body id="bgdark">
 
-    <div class="top-bar">
-        《 argentfolio es un producto desarrollado por Tomás Torres para la comisión-16840-j-online. 》 
+    <div  class="top-bar">
+        《 argentfolio es un producto desarrollado por Tomás Torres para la comisión-16840-j-online. 》 ETH: <span id="precioEthereum"></span>  BTC: <span id="precioBitcoin"></span>     
+    <div>
+            
+  
+    <button class="darkmodebutton" id="darkmodebutton"><img class="luna-button" src="images\luna.png" alt=""></button>
     </div>
 
+
+
+
     <nav class="navbar">
-        <h1 class="titulo">｛Argentfolio｝</h1>
-        <p class="titulo2">Tu portfolio crypto argentino.</p>
+        <h1 id="p1" class="titulo">｛Argentfolio｝</h1>
+        <p id="p2" class="titulo2">Tu portfolio crypto argento.</p>
     </nav>
+<!-- 
+    <form action="">
+        <input type="text">
+        <input type="submit">
+    </form>
+        <input type="text">
+        <input type="submit">
+
+        <input type="text">
+        <input type="submit">
+    </form> -->
 
     <div class="web-body">
         <div class="portfolio-container">
             <div class="portfolio-sections">
-            <p class="subtit"> Nombre</p>
-            <div class="linea-verde"></div>
-            <p> Ethereum (ETH)</p>
-            <div class="linea-verde"></div>
-            <p>Bitcoin (BTC)</p>
-            <div class="linea-verde"></div>
-            <p>Cardano (ADA)</p>
+                <p class="subtit"> Moneda </p>
+                <p class="subtit"> Inversión </p>
+                <p class="subtit"> Precio de compra</p>
+                <p class="subtit"> Holdings </p>
+                <p class="subtit"> Acciones </p>
+            </div>
+            <div id="nuevaMoneda" class="nuevaMoneda portfolio-sections">
+
+            </div>
+
+            <div class="portfolio-sections">
+            <!-- FORM + -->
+                <form action="" id="form">
+                    <input type="text" id="nombre" name="nombre" placeholder="BTC/ETH/ADA/DAI">
+                    <input type="text" id="precio" name="precio" placeholder="Precio de compra">
+                    <input type="text" id="holding" name="holding"
+                    placeholder="Cantidad de tokens">
+
+                    <input class="addCoinButton" type="submit" value="Agregar" id="addCoinButton">
+                </form>
+            </div>
 
         </div>
 
-        
-
-        <div class="portfolio-sections">
-            <p class="subtit"> Precio</p>
-            <div class="linea-verde"></div>
-            <p>$3.200</p>
-            <div class="linea-verde"></div>
-            <p>$49.000</p>
-            <div class="linea-verde"></div>
-            <p>$2.80</p>
-
-        </div>
-
-        
-        <div class="portfolio-sections">
-            <p class="subtit">24H</p>
-            <div class="linea-verde"></div>
-            <p>+2%</p>
-            <div class="linea-verde"></div>
-            <p>+2%</p>
-            <div class="linea-verde"></div>
-            <p>-1%</p>
-
-
-        </div>
-
-        <div class="portfolio-sections">
-            <p class="subtit"> Holdings </p>
-            <div class="linea-verde"></div>
-            <p>2 ETH</p>
-            <div class="linea-verde"></div>
-            <p>1 BTC</p>
-            <div class="linea-verde"></div>
-            <p>500 ADA</p>
-
-        </div>
-
-        <div class="portfolio-sections">
-            <p class="subtit"> Acciones </p>
-            <div class="linea-verde"></div>
-            <div class="boton-container"><p class="boton-acciones">+</p></div>
-            <div class="linea-verde"></div>
-            <div class="boton-container"><p class="boton-acciones">+</p></div>
-            <div class="linea-verde"></div>
-            <div class="boton-container"><p class="boton-acciones">+</p></div>
-
-        </div>
-        </div>
     </div>
 
+<!-- 
+    <div style="background-color: red;">
+        <button id="precioETH">PRECIO ETH</button>
+        <div id="divEth"></div>
+    </div> -->
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="monedas.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

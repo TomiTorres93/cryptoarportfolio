@@ -1,0 +1,45 @@
+/*MOBILE QUERY*/
+@media only screen and (min-width: 601px) {
+
+    .none-desktop {
+        display: none !important;
+    }
+ }
+
+
+ @media only screen and (min-width: 100px) and  (max-width: 600px) {
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .none-mobile {
+        display: none !important;
+    }
+
+    .web-body {
+
+        height: 80vw;
+    }
+
+    .top-bar {
+        height: 12vw;
+        font-size: 0.8rem;
+
+    }
+
+    .portfolio-container {
+        margin-top: 10rem;
+        width: 90%;
+        height: 15rem;
+    }
+
+    .titulo {
+        font-size: 3rem;
+        margin-top: 3rem;
+    }
+
+    .titulo2 {
+        bottom: 0rem;
+    }
+}

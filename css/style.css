@@ -1,11 +1,11 @@
 /* Extends */
-.portfolio-container {
+.row2, .portfolio-sections {
   display: flex;
   align-items: center;
   flex-direction: row;
 }
 
-.portfolio-sections {
+.portfolio-container {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -16,10 +16,10 @@ body {
   margin: 0 auto;
   background: #38866d;
   background: linear-gradient(180deg, #38866d 16%, #1d162f 80%);
-  background-size: contain;
+  background-size: cover;
   font-family: "Inter", sans-serif;
   font-size: 15px;
-  height: 50vw;
+  height: 1280px;
 }
 
 .navbar {
@@ -36,9 +36,17 @@ body {
 }
 
 .top-bar {
-  height: 1vw;
+  height: 1.2rem;
   background-color: white;
   color: #38866d;
+  font-size: 0.7rem;
+  padding: 0.3vw 1vw;
+}
+
+.top-bar-dark {
+  height: 1vw;
+  background-color: white;
+  color: #0f201b;
   font-size: 0.7rem;
   padding: 0.3vw 1vw;
 }
@@ -64,8 +72,8 @@ body {
 .portfolio-container {
   justify-content: space-around;
   width: 70%;
-  height: 60%;
-  background-color: white;
+  height: 100%;
+  background: white;
   color: #38866d;
   transition: all 1s;
   animation: changeBorder 10s infinite;
@@ -107,9 +115,15 @@ body {
   }
 }
 
+.bg-dark {
+  background: #012218;
+  background: linear-gradient(180deg, #232927 16%, #1d162f 80%);
+}
+
 .portfolio-sections {
   text-align: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .coin-img {
@@ -123,7 +137,7 @@ body {
   align-items: center;
   width: 2vw;
   height: 1.6vw;
-  margin: 0.7vw 0vw;
+  margin: 0.4vw 0vw;
 }
 
 .boton-acciones {
@@ -141,12 +155,83 @@ body {
 
 .subtit {
   font-weight: 600;
+  margin: auto 2rem;
 }
 
 .linea-verde {
   height: 0.05rem;
   width: 1.5rem;
   background-color: #38866d;
+}
+
+/*MOBILE QUERY*/
+@media only screen and (min-width: 601px) {
+  .none-desktop {
+    display: none !important;
+  }
+}
+@media only screen and (min-width: 100px) and (max-width: 600px) {
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .none-mobile {
+    display: none !important;
+  }
+
+  .web-body {
+    height: 80vw;
+  }
+
+  .top-bar {
+    height: 12vw;
+    font-size: 0.8rem;
+  }
+
+  .portfolio-container {
+    margin-top: 10rem;
+    width: 90%;
+    height: 15rem;
+  }
+
+  .titulo {
+    font-size: 3rem;
+    margin-top: 3rem;
+  }
+
+  .titulo2 {
+    bottom: 0rem;
+  }
+}
+.darkmodebutton {
+  background: none;
+  border: none;
+  position: absolute;
+  right: 0.3rem;
+  top: 0.03rem;
+}
+
+.luna-button {
+  width: 40%;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+.luna-button:hover {
+  transform: rotate(30deg);
+}
+
+.addCoinButton {
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background: #38866d;
+  height: 1.5rem;
+}
+
+.row2 {
+  text-align: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
