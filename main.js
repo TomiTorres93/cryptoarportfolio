@@ -139,10 +139,10 @@ darkmodebutton.addEventListener('click', function () {
 precioEthereum = document.getElementById("precioEthereum")
 
 document.getElementById("precioEthereum")
-fetch('https://criptoya.com/api/bitstamp/eth')
+fetch('https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD,JPY,EUR')
 .then(response => response.json())
 .then(data => {
-    let ethPrice = data.last;
+    let ethPrice = data.USD;
     console.log(ethPrice)
     $("#precioEthereum").append(`
     <span class="topbartext"> <strong> ${ethPrice}</strong> </span>
@@ -155,28 +155,42 @@ fetch('https://criptoya.com/api/bitstamp/eth')
 precioBitcoin = document.getElementById("precioBitcoin")
 
 document.getElementById("precioBitcoin")
-fetch('https://criptoya.com/api/bitstamp/btc')
+fetch('https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD,JPY,EUR')
 .then(response => response.json())
 .then(data => {
-    const btcPrice = data.last;
-    console.log(btcPrice)
+    const btcPrice = data.USD;
+    console.log(data.USD)
     $("#precioBitcoin").append(`
     <span class="topbartext"> <strong> ${btcPrice}</strong> </span>
  `)
 });
 
-console.log(btcPrice)
-
 //ADA 
 
-precioMATIC = document.getElementById("precioMATIC")
+precioADA = document.getElementById("precioADA")
 
-document.getElementById("precioMATIC")
-fetch('https://criptoya.com/api/bitstamp/matic')
+document.getElementById("precioADA")
+fetch('https://min-api.cryptocompare.com/data/price?fsym=ADA&tsyms=USD,JPY,EUR')
 .then(response => response.json())
 .then(data => {
-    let maticPrice = data.last;
-    console.log(maticPrice)
+    let cardanoPrice = data.USD;
+    console.log(data.USD)
+    $("#precioADA").append(`
+    <span class="topbartext"> <strong> ${cardanoPrice}</strong> </span>
+ `)
+    
+});
+
+//MATIC
+
+precioADA = document.getElementById("precioMATIC")
+
+document.getElementById("precioMATIC")
+fetch('https://min-api.cryptocompare.com/data/price?fsym=MATIC&tsyms=USD,JPY,EUR')
+.then(response => response.json())
+.then(data => {
+    let maticPrice = data.USD;
+    console.log(data.USD)
     $("#precioMATIC").append(`
     <span class="topbartext"> <strong> ${maticPrice}</strong> </span>
  `)
