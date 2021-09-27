@@ -25,8 +25,7 @@
 
     <div  class="top-bar">
         《 argentfolio es un producto desarrollado por Tomás Torres para la comisión-16840-j-online. 》 ETH: <span id="precioEthereum"></span> &nbsp; BTC: <span id="precioBitcoin"></span> &nbsp; ADA: <span id="precioADA"></span> &nbsp; MATIC: <span id="precioMATIC"></span>         
-    <div>
-            
+                
   
     <button class="darkmodebutton" id="darkmodebutton"><img class="luna-button" src="images\luna.png" alt=""></button>
     </div>
@@ -34,39 +33,37 @@
 
 
 
-    <nav class="navbar">
+    <section class="navbar">
         <h1 id="p1" class="titulo">｛Argentfolio｝</h1>
         <p id="p2" class="titulo2">Tu portfolio crypto argento.</p>
-    </nav>
-<!-- 
-    <form action="">
-        <input type="text">
-        <input type="submit">
-    </form>
-        <input type="text">
-        <input type="submit">
+    </section>
 
-        <input type="text">
-        <input type="submit">
-    </form> -->
-
-    <div class="web-body">
+    <section class="web-body">
         <div class="portfolio-container">
             <div class="portfolio-sections">
                 <p class="subtit"> Moneda </p>
                 <p class="subtit"> Inversión </p>
                 <p class="subtit"> Precio de compra</p>
                 <p class="subtit"> Holdings </p>
-                <p class="subtit"> Acciones </p>
+                <p class="subtit"> ARS </p>
             </div>
-            <div id="nuevaMoneda" class="nuevaMoneda portfolio-sections">
+            <div  class="nuevaMoneda portfolio-sections">
+                <div id="nuevaMoneda">
+
+                </div>
 
             </div>
 
             <div class="portfolio-sections">
             <!-- FORM + -->
                 <form action="" id="form">
-                    <input type="text" id="nombre" name="nombre" placeholder="BTC/ETH/ADA/DAI">
+                    <select type="text" id="nombre" name="nombre"> 
+                        <option value="ETH">ETH</option>AldoETHsivi
+                        <option value="BTC">BTC</option>BTC
+                        <option value="ADA">ADA </option>ADA
+                        <option value="MATIC">MATIC </option>MATIC
+                        <option value="DAI">DAI </option>DAI
+                        </select>
                     <input type="text" id="precio" name="precio" placeholder="Precio de compra">
                     <input type="text" id="holding" name="holding"
                     placeholder="Cantidad de tokens">
@@ -77,7 +74,7 @@
 
         </div>
 
-    </div>
+    </section>
 
 <!-- 
     <div style="background-color: red;">

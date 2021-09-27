@@ -102,12 +102,14 @@ form.addEventListener("submit", function(e) {
 
 
         $("#nuevaMoneda").append( `
+        
         <div class="row2">
         <p class="subtit"> ${moneda.nombre}</p>
         <p class="subtit"> ${"$" + (moneda.precio * moneda.holding)}</p>
         <p class="subtit"> ${"$" + moneda.precio} </p>
         <p class="subtit"> ${moneda.usdHolding + " " + moneda.nombre} </p>
         </div>
+        
             `);
 
             // for (var i = 0; i < arrMonedas.length; i++) {
@@ -158,7 +160,7 @@ document.getElementById("precioBitcoin")
 fetch('https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD,JPY,EUR')
 .then(response => response.json())
 .then(data => {
-    const btcPrice = data.USD;
+    let btcPrice = data.USD;
     console.log(data.USD)
     $("#precioBitcoin").append(`
     <span class="topbartext"> <strong> ${btcPrice}</strong> </span>
@@ -194,9 +196,9 @@ fetch('https://min-api.cryptocompare.com/data/price?fsym=MATIC&tsyms=USD,JPY,EUR
     $("#precioMATIC").append(`
     <span class="topbartext"> <strong> ${maticPrice}</strong> </span>
  `)
-    
 });
 
+console.log(f2.json())
 
 // let coin = []
 // divEth = document.getElementById("divEth")

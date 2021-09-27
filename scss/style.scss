@@ -21,7 +21,7 @@ body {
 }
 
 .web-body {
-    display: flex;
+    @extend %flexbox-columna;
     justify-items: center;
     justify-content: center;
     text-align: center;
@@ -145,6 +145,7 @@ body {
     flex-wrap: wrap;
 }
 
+
 .coin-img {
     height: 1vw;
 }
@@ -177,6 +178,7 @@ body {
 }
 
 .subtit {
+    font-size: 1rem;
     font-weight: 600;
     margin: auto 2rem;
 }
@@ -223,5 +225,4 @@ body {
     @extend %flexbox-row;
     text-align: center;
     align-items: center;
-
 }

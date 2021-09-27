@@ -5,7 +5,7 @@
   flex-direction: row;
 }
 
-.portfolio-container {
+.portfolio-container, .web-body {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -20,6 +20,7 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 15px;
   height: 1280px;
+  transition: background-color ease 5s;
 }
 
 .navbar {
@@ -27,7 +28,6 @@ body {
 }
 
 .web-body {
-  display: flex;
   justify-items: center;
   justify-content: center;
   text-align: center;
@@ -41,6 +41,14 @@ body {
   color: #38866d;
   font-size: 0.7rem;
   padding: 0.3vw 1vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.topbartext {
+  background-color: white;
+  color: #38866d;
+  font-size: 0.7rem;
 }
 
 .top-bar-dark {
@@ -154,6 +162,7 @@ body {
 }
 
 .subtit {
+  font-size: 1rem;
   font-weight: 600;
   margin: auto 2rem;
 }
