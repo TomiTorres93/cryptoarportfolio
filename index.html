@@ -24,12 +24,11 @@
 <body id="bgdark">
 
     <div  class="top-bar">
-        《 argentfolio es un producto desarrollado por Tomás Torres para la comisión-16840-j-online. 》 ETH: <span id="precioEthereum"></span> &nbsp; BTC: <span id="precioBitcoin"></span> &nbsp; ADA: <span id="precioADA"></span> &nbsp; MATIC: <span id="precioMATIC"></span>         
+        《 argentfolio es un producto desarrollado por Tomás Torres para la comisión-16840-j-online. 》 ETH:&nbsp; <span id="precioEthereum"></span> &nbsp;&nbsp; BTC:&nbsp; <span id="precioBitcoin"></span> &nbsp;&nbsp; ADA:&nbsp; <span id="precioADA"></span> &nbsp;&nbsp; MATIC:&nbsp; <span id="precioMATIC"></span> &nbsp;&nbsp; DÓLAR BLUE:&nbsp; <span id="precioDOLAR"></span>          
                 
   
     <button class="darkmodebutton" id="darkmodebutton"><img class="luna-button" src="images\luna.png" alt=""></button>
     </div>
-
 
 
 
@@ -46,6 +45,7 @@
                 <p class="subtit"> Precio de compra</p>
                 <p class="subtit"> Holdings </p>
                 <p class="subtit"> ARS </p>
+
             </div>
             <div  class="nuevaMoneda portfolio-sections">
                 <div id="nuevaMoneda">
@@ -57,25 +57,31 @@
             <div class="portfolio-sections">
             <!-- FORM + -->
                 <form action="" id="form">
-                    <select type="text" id="nombre" name="nombre"> 
-                        <option value="ETH">ETH</option>AldoETHsivi
-                        <option value="BTC">BTC</option>BTC
-                        <option value="ADA">ADA </option>ADA
-                        <option value="MATIC">MATIC </option>MATIC
-                        <option value="DAI">DAI </option>DAI
-                        </select>
-                    <input type="text" id="precio" name="precio" placeholder="Precio de compra">
+                    <select type="text" id="nombre" name="nombre" onChange="cambiarprecio()"> 
+                        <option value="ETH">ETH</option>
+                        <option value="BTC">BTC</option>
+                        <option value="ADA">ADA</option>
+                        <option value="MATIC">MATIC</option>
+                        <option value="DAI">DAI</option>
+                    </select>
+                    
+                    <input type="text" id="precio" class="precio" name="precio" placeholder="Precio de compra">
+                    
                     <input type="text" id="holding" name="holding"
                     placeholder="Cantidad de tokens">
 
-                    <input class="addCoinButton" type="submit" value="Agregar" id="addCoinButton">
+                    <input class="livePrice" type="date" id="fecha">
+
+                    <button class="addCoinButton" type="submit" value="Agregar" id="addCoinButton"> Agregar </button>
                 </form>
+
+     
             </div>
 
         </div>
-
+        
     </section>
-
+    
 <!-- 
     <div style="background-color: red;">
         <button id="precioETH">PRECIO ETH</button>
@@ -91,5 +97,6 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="monedas.js"></script>
     <script src="main.js"></script>
+    <script src="funciones.js"></script>
 </body>
 </html>

@@ -1,16 +1,15 @@
-let precioDolar = parseInt(180);
 
+const currencies = []
+setTimeout(function() {
+let precioDOLAR = currencies[4];
 let usdHolding = holding * precio;
-let pesosHolding = usdHolding * precioDolar;
+let pesosHolding = usdHolding * precioDOLAR;
 
 const moneda = new Moneda (nombre, precio, holding, usdHolding, pesosHolding);
 
-// let nombre = prompt("Ingrese el tipo de moneda");
-// let holding = Number(prompt("Ingrese la cantidad de " + nombre + " comprado"));
-// let precio = Number(prompt("Ingrese el precio de la moneda al momento de la compra"));
-// let inversion = " USD " + (precio * holding);
 
-
+console.log(currencies[4])
+}, 600);
 //ANIMACIONES
 $(() => {
     $("#p1").fadeOut(500)
@@ -22,105 +21,6 @@ $(() => {
         })
 
 })
-
-
-// let nombre = "ADA";
-// let holding = 2;
-// let precio = 2;
-// let inversion = " USD " + (precio * holding);
-
-
-// frase = `Has agregado ${holding} de ${nombre} a tu portfolio`;
-// console.log(frase);
-
-
-
-
-// // BOTONES ADD
-
-
-
-// let form = document.getElementById('form');
-
-// form.addEventListener("submit", function(e) {
-//     e.preventDefault();
-//     let formValues = new FormData(e.target);
-
-//     console.log(precioDolar);
-
-//     let moneda = {nombre: formValues.get("nombre"), precio: formValues.get("precio"), holding: formValues.get("holding"), usdHolding: parseInt(formValues.get("holding") *formValues.get("precio")), pesosHolding: parseFloat(parseInt(formValues.get("holding") *formValues.get("precio")) * precioDolar)};
-//       form.reset();
-
-//     const arrMonedas = []
-
-//     arrMonedas.push(moneda);
-//     console.log(moneda);
-    
-//     localStorage.setItem("MonedasEnLocalStorage", JSON.stringify(arrMonedas));
-
-// });
-
-
-// // agregar Moneda
-
-// const addCoinButton = document.getElementById('addCoinButton') 
-
-// addCoinButton.addEventListener('click', function () {
-
-//     nuevaMoneda = document.getElementById("nuevaMoneda");
-    
-//     nuevaMoneda.innerHTML += `
-//     <div class="row2">
-//     <p> ${moneda[0]} </p>
-//     <p> ${moneda.inversion} </p>
-//     <p> ${moneda.precio} </p>
-//     <p> ${moneda.usdHolding} </p>
-//     </div>
-//         `;   
-//         console.log(precio)
-//         console.log(moneda.inversion)
-// });
-
-
-// BOTONES ADD
-let form = document.getElementById('form');
-const addCoinButton = document.getElementById('addCoinButton') 
-form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    let formValues = new FormData(e.target);
-    console.log(precioDolar);
-    let moneda = new Moneda (formValues.get("nombre"), formValues.get("precio"), formValues.get("holding"), parseInt(formValues.get("holding") *formValues.get("precio")), parseFloat(parseInt(formValues.get("holding") *formValues.get("precio")) * precioDolar));
-    form.reset();
-    const arrMonedas = []
-    arrMonedas.push(moneda) ; 
-    
-      
-    console.log(moneda);
-    localStorage.setItem("txs", JSON.stringify(arrMonedas));
-
-
-
-
-        $("#nuevaMoneda").append( `
-        
-        <div class="row2">
-        <p class="subtit"> ${moneda.nombre}</p>
-        <p class="subtit"> ${"$" + (moneda.precio * moneda.holding)}</p>
-        <p class="subtit"> ${"$" + moneda.precio} </p>
-        <p class="subtit"> ${moneda.usdHolding + " " + moneda.nombre} </p>
-        </div>
-        
-            `);
-
-            // for (var i = 0; i < arrMonedas.length; i++) {
-            //     console.log(...arrMonedas)
-            //     }
-});
-
-
-
-
-
 
 // DARKMODE 
 
@@ -137,7 +37,7 @@ darkmodebutton.addEventListener('click', function () {
 
 // COTIZACIONES
 //ETH 
-
+setTimeout(function() {
 precioEthereum = document.getElementById("precioEthereum")
 
 document.getElementById("precioEthereum")
@@ -145,14 +45,17 @@ fetch('https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD,JPY,EUR')
 .then(response => response.json())
 .then(data => {
     let ethPrice = data.USD;
-    console.log(ethPrice)
+    currencies.push(ethPrice)
+      console.log(ethPrice)
     $("#precioEthereum").append(`
     <span class="topbartext"> <strong> ${ethPrice}</strong> </span>
  `)
     
 });
+}, 10);
 
 //BTC 
+setTimeout(function() {
 
 precioBitcoin = document.getElementById("precioBitcoin")
 
@@ -161,14 +64,15 @@ fetch('https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD,JPY,EUR')
 .then(response => response.json())
 .then(data => {
     let btcPrice = data.USD;
-    console.log(data.USD)
+    currencies.push(btcPrice)
+    console.log(btcPrice)
     $("#precioBitcoin").append(`
     <span class="topbartext"> <strong> ${btcPrice}</strong> </span>
  `)
 });
-
+}, 100);
 //ADA 
-
+setTimeout(function() {
 precioADA = document.getElementById("precioADA")
 
 document.getElementById("precioADA")
@@ -176,108 +80,90 @@ fetch('https://min-api.cryptocompare.com/data/price?fsym=ADA&tsyms=USD,JPY,EUR')
 .then(response => response.json())
 .then(data => {
     let cardanoPrice = data.USD;
-    console.log(data.USD)
+    currencies.push(cardanoPrice)
+    console.log(cardanoPrice)
     $("#precioADA").append(`
     <span class="topbartext"> <strong> ${cardanoPrice}</strong> </span>
  `)
-    
-});
-
+});}, 150);
+setTimeout(function() {
 //MATIC
-
-precioADA = document.getElementById("precioMATIC")
-
+precioMATIC = document.getElementById("precioMATIC")
 document.getElementById("precioMATIC")
 fetch('https://min-api.cryptocompare.com/data/price?fsym=MATIC&tsyms=USD,JPY,EUR')
 .then(response => response.json())
-.then(data => {
+.then (data => {
     let maticPrice = data.USD;
-    console.log(data.USD)
+    currencies.push(maticPrice)
+    console.log(maticPrice)
     $("#precioMATIC").append(`
     <span class="topbartext"> <strong> ${maticPrice}</strong> </span>
- `)
-});
+ `) 
+});}, 200);
 
-console.log(f2.json())
+setTimeout(function() {
+    //DOLAR
+    precioDOLAR = document.getElementById("precioDOLAR")
+    document.getElementById("precioDOLAR")
+    fetch('https://criptoya.com/api/dolar')
+    .then(response => response.json())
+    .then (data => {
+        let precioDOLAR = data.blue;
+        currencies.push(precioDOLAR)
+        console.log(precioDOLAR)
+        $("#precioDOLAR").append(`
+        <span class="topbartext"> <strong> $${precioDOLAR}</strong> </span>
+     `) 
+    } );}, 250);
 
-// let coin = []
-// divEth = document.getElementById("divEth")
-
-//  document.getElementById("precioETH").addEventListener("click", () => {
-//   fetch('https://criptoya.com/api/bitstamp/eth')
-//   .then(res => res.json())
-//  .then(data => {
-//       {
-//         if (eth = "last")    
-//       divEth.innerHTML += `
-//              <p id="${eth}"> ${data[eth]} </p>
-//           `
-//          coin.push({valor: data[eth]})
-//            }
-//        }
-//     )
-
-//     .catch(error => console.error(error))
-//  })
+////////////////////////////////////////
+////////////////////////////////////////
 
 
+// BOTONES ADD
+
+  
+const addCoinButton = document.getElementById('addCoinButton') 
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    let formValues = new FormData(e.target);
+
+     
+    let dolarblue = currencies[4];
+    console.log(dolarblue);
 
 
-
-// $("#p1").show()
-
-// fadein  fadeout
-
-
-
-
-// //AGREGA LA INFORMACIÓN PEDIDA EN LOS PROMPT
-
-// addPrice = document.getElementById("addPrice").innerHTML = precio;
-// addName = document.getElementById("addName").innerHTML = nombre;
-// addHolding = document.getElementById("addHolding").innerHTML = holding + " " + nombre;
-// addInversion = document.getElementById("addInversion").innerHTML = " USD " + (precio * holding);
-
-
-
-    // nuevaMoneda = document.getElementById("nuevaMoneda");
+    let moneda = {nombre: formValues.get("nombre"), precio: formValues.get("precio"), holding: formValues.get("holding"), usdHolding: parseInt(formValues.get("holding") *formValues.get("precio")), pesosHolding: parseFloat(parseInt(formValues.get("holding") *formValues.get("precio") *dolarblue) )};    
+    form.reset();
+    const arrMonedas = []
+    arrMonedas.push(moneda) ; 
     
-    // nuevaMoneda.innerHTML += `
-    // <div class="row2">
-    // <p class="subtit"> ${moneda.nombre}</p>
-    // <p class="subtit"> ${"$" + (moneda.precio * moneda.holding)}</p>
-    // <p class="subtit"> ${"$" + moneda.precio} </p>
-    // <p class="subtit"> ${moneda.usdHolding + " " + moneda.nombre} </p>
-    // </div>
-    //     `; 
+      
+    console.log(moneda);
+    localStorage.setItem("txs", JSON.stringify(arrMonedas));
 
 
-// addPrice.appendChild()
-// addName.appendChild()
-// addHolding.appendChild()
-// addInversion.appendChild()
 
 
-// if  (nombre == "bitcoin" || nombre == "btc" || nombre == "BTC" || nombre == "Bitcoin") {
-//     var precio = Number(parseInt(49000));
-// } else if  (nombre == "ether" || nombre == "eth" || nombre == "ETH" || nombre == "ethereum") {
-//     var precio = Number(parseInt(3200));
-// } else if  (nombre == "ada" || nombre == "cardano" || nombre == "ADA") {
-//     var precio = Number(parseFloat(2.8));
-// } else if  (nombre == "dai" || nombre == "DAI") {
-//     var precio = Number(parseInt(1));
-// }  
+     $("#nuevaMoneda").append( `
+        
+        <div class="row2">
+        <p class="subtit" id="txName"> ${moneda.nombre}</p>
+        <p class="subtit" id="txInversion"> ${"U$D" + (moneda.precio * moneda.holding)}</p>
+        <p class="subtit" id="txPrecio"> ${"U$D" + moneda.precio} </p>
+        <p class="subtit" id="txHoldings"> ${moneda.holding + " " + moneda.nombre} </p>
+        <p class="subtit" id="txArs"> ${"AR$"+ (moneda.pesosHolding)} </p>
+        </div>
+        
+            `);
+            
+            // let txName = document.getElementById('txName').value;
+            // let newTx = {txName: txName, txInversion: document.getElementById('txInversion').value, txPrecio: document.getElementById('txPrecio').value, txHoldings: document.getElementById('txHoldings').value, txArs: document.getElementById('txArs').value}
 
+            // const txs = []
+            // console.log(newTx)
+            // txs.push(newTx) ; 
 
-// monedas.sort((a, b) => {
-//     if (a.precio < b.precio) {
-//         return -1;
-//     } if (a.precio > b.precio) {
-//         return 1;
-//     } return 0;
-// }
-
-// )
-
-/////////////////////////////////////// 
-//////////////////////////////////////
+            // localStorage.setItem("txs", JSON.stringify(txs));
+    
+});

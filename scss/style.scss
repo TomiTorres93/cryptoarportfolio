@@ -221,6 +221,14 @@ body {
 
 }
 
+.livePrice {
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background: rgb(56,134,109);
+    height: 1.5rem;
+}
+
 .row2 {
     @extend %flexbox-row;
     text-align: center;
