@@ -25,14 +25,26 @@ $(() => {
 // DARKMODE 
 
 const bgdark = document.getElementById('bgdark') 
+const card = document.querySelector('.card')
 
 darkmodebutton.addEventListener('click', function () {
-   if (bgdark.classList.contains('bg-dark')) {
+   if (bgdark.classList.contains('bg-dark') && card.classList.contains('card-dark')) {
        bgdark.classList.remove('bg-dark');
+       card.classList.remove('card-dark');
+
+    //    for (i = 0; i < 4; i++) {
+    //    card.classList.remove('card-dark');
+    // }
     } else {
-        bgdark.classList.add('bg-dark')
-    }}
-);
+        bgdark.classList.add('bg-dark');
+        card.classList.add('card-dark');
+
+    //     for (i = 0; i < 4; i++) {
+    //     card.classList.add('card-dark');
+    // }
+    }
+
+});
 
 
 // COTIZACIONES
@@ -54,6 +66,63 @@ fetch('https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD,JPY,EUR')
 });
 }, 10);
 
+setTimeout(function() {
+    precioEthereum = document.getElementById("precioEthereum2")
+    
+    document.getElementById("precioEthereum2")
+    fetch('https://min-api.cryptocompare.com/data/generateAvg?fsym=ETH&tsym=USD&e=Kraken')
+    .then(response => response.json())
+    .then(data => {
+        let ethPrice = data.RAW.PRICE;
+        currencies.push(ethPrice)
+          console.log(ethPrice)
+        $("#precioEthereum2").append(`
+        <span class="card-price"> <strong> $${ethPrice}</strong> </span>
+     `)
+        
+    });
+    }, 10);
+
+    setTimeout(function() {
+        precioEthereum = document.getElementById("precioEthereumMove")
+        
+        document.getElementById("precioEthereumMove")
+        fetch('https://min-api.cryptocompare.com/data/generateAvg?fsym=ETH&tsym=USD&e=Kraken')
+        .then(response => response.json())
+        .then(data => {
+            let ethPrice = data.DISPLAY.CHANGE24HOUR;
+            currencies.push(ethPrice)
+              console.log(ethPrice)
+            $("#precioEthereumMove").append(`
+            <span class="card-price-move"> <strong> ${ethPrice}</strong> </span>
+         `)
+            
+        });
+        }, 10);
+
+        
+    setTimeout(function() {
+        precioEthereum = document.getElementById("precioEthereumPercentage")
+        
+        document.getElementById("precioEthereumPercentage")
+        fetch('https://min-api.cryptocompare.com/data/generateAvg?fsym=ETH&tsym=USD&e=Kraken')
+        .then(response => response.json())
+        .then(data => {
+            let ethPrice = data.DISPLAY.CHANGEPCT24HOUR;
+            currencies.push(ethPrice)
+              console.log(ethPrice)
+            $("#precioEthereumPercentage").append(`
+            <span class="card-price-move"> <strong> ${ethPrice}%</strong> </span>
+         `)
+            
+        });
+        }, 10);
+
+
+        
+
+        
+
 //BTC 
 setTimeout(function() {
 
@@ -71,6 +140,58 @@ fetch('https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD,JPY,EUR')
  `)
 });
 }, 100);
+
+setTimeout(function() {
+    precioEthereum = document.getElementById("precioBTC2")
+    
+    document.getElementById("precioBTC2")
+    fetch('https://min-api.cryptocompare.com/data/generateAvg?fsym=BTC&tsym=USD&e=Kraken')
+    .then(response => response.json())
+    .then(data => {
+        let btcPrice = data.RAW.PRICE;
+        currencies.push(btcPrice)
+          console.log(btcPrice)
+        $("#precioBTC2").append(`
+        <span class="card-price"> <strong> $${btcPrice}</strong> </span>
+     `)
+        
+    });
+    }, 10);
+
+    setTimeout(function() {
+        precioEthereum = document.getElementById("precioBTCMove")
+        
+        document.getElementById("precioBTCMove")
+        fetch('https://min-api.cryptocompare.com/data/generateAvg?fsym=BTC&tsym=USD&e=Kraken')
+        .then(response => response.json())
+        .then(data => {
+            let btcPrice = data.DISPLAY.CHANGE24HOUR;
+            currencies.push(btcPrice)
+              console.log(btcPrice)
+            $("#precioBTCMove").append(`
+            <span class="card-price-move"> <strong> ${btcPrice}</strong> </span>
+         `)
+            
+        });
+        }, 10);
+
+        
+    setTimeout(function() {
+        precioEthereum = document.getElementById("precioBTCPercentage")
+        
+        document.getElementById("precioBTCPercentage")
+        fetch('https://min-api.cryptocompare.com/data/generateAvg?fsym=BTC&tsym=USD&e=Kraken')
+        .then(response => response.json())
+        .then(data => {
+            let btcPrice = data.DISPLAY.CHANGEPCT24HOUR;
+            currencies.push(btcPrice)
+              console.log(btcPrice)
+            $("#precioBTCPercentage").append(`
+            <span class="card-price-move"> <strong> ${btcPrice}%</strong> </span>
+         `)
+            
+        });
+        }, 10);
 //ADA 
 setTimeout(function() {
 precioADA = document.getElementById("precioADA")
@@ -86,6 +207,59 @@ fetch('https://min-api.cryptocompare.com/data/price?fsym=ADA&tsyms=USD,JPY,EUR')
     <span class="topbartext"> <strong> ${cardanoPrice}</strong> </span>
  `)
 });}, 150);
+
+
+setTimeout(function() {
+    precioEthereum = document.getElementById("precioADA2")
+    
+    document.getElementById("precioADA2")
+    fetch('https://min-api.cryptocompare.com/data/generateAvg?fsym=ADA&tsym=USD&e=Kraken')
+    .then(response => response.json())
+    .then(data => {
+        let btcPrice = data.RAW.PRICE;
+        currencies.push(btcPrice)
+          console.log(btcPrice)
+        $("#precioADA2").append(`
+        <span class="card-price"> <strong> $${btcPrice}</strong> </span>
+     `)
+        
+    });
+    }, 10);
+
+    setTimeout(function() {
+        precioEthereum = document.getElementById("precioADAMove")
+        
+        document.getElementById("precioADAMove")
+        fetch('https://min-api.cryptocompare.com/data/generateAvg?fsym=ADA&tsym=USD&e=Kraken')
+        .then(response => response.json())
+        .then(data => {
+            let btcPrice = data.DISPLAY.CHANGE24HOUR;
+            currencies.push(btcPrice)
+              console.log(btcPrice)
+            $("#precioADAMove").append(`
+            <span class="card-price-move"> <strong> ${btcPrice}</strong> </span>
+         `)
+            
+        });
+        }, 10);
+
+        
+    setTimeout(function() {
+        precioEthereum = document.getElementById("precioADAPercentage")
+        
+        document.getElementById("precioADAPercentage")
+        fetch('https://min-api.cryptocompare.com/data/generateAvg?fsym=ADA&tsym=USD&e=Kraken')
+        .then(response => response.json())
+        .then(data => {
+            let btcPrice = data.DISPLAY.CHANGEPCT24HOUR;
+            currencies.push(btcPrice)
+              console.log(btcPrice)
+            $("#precioADAPercentage").append(`
+            <span class="card-price-move"> <strong> ${btcPrice}%</strong> </span>
+         `)
+            
+        });
+        }, 10);
 setTimeout(function() {
 //MATIC
 precioMATIC = document.getElementById("precioMATIC")
@@ -102,6 +276,58 @@ fetch('https://min-api.cryptocompare.com/data/price?fsym=MATIC&tsyms=USD,JPY,EUR
 });}, 200);
 
 setTimeout(function() {
+    precioEthereum = document.getElementById("precioMATIC2")
+    
+    document.getElementById("precioMATIC2")
+    fetch('https://min-api.cryptocompare.com/data/generateAvg?fsym=MATIC&tsym=USD&e=Kraken')
+    .then(response => response.json())
+    .then(data => {
+        let btcPrice = data.RAW.PRICE;
+        currencies.push(btcPrice)
+          console.log(btcPrice)
+        $("#precioMATIC2").append(`
+        <span class="card-price"> <strong> $${btcPrice}</strong> </span>
+     `)
+        
+    });
+    }, 10);
+
+    setTimeout(function() {
+        precioEthereum = document.getElementById("precioMATICMove")
+        
+        document.getElementById("precioMATICMove")
+        fetch('https://min-api.cryptocompare.com/data/generateAvg?fsym=MATIC&tsym=USD&e=Kraken')
+        .then(response => response.json())
+        .then(data => {
+            let btcPrice = data.DISPLAY.CHANGE24HOUR;
+            currencies.push(btcPrice)
+              console.log(btcPrice)
+            $("#precioMATICMove").append(`
+            <span class="card-price-move"> <strong> ${btcPrice}</strong> </span>
+         `)
+            
+        });
+        }, 10);
+
+        
+    setTimeout(function() {
+        precioEthereum = document.getElementById("precioMATICPercentage")
+        
+        document.getElementById("precioMATICPercentage")
+        fetch('https://min-api.cryptocompare.com/data/generateAvg?fsym=ADA&tsym=USD&e=Kraken')
+        .then(response => response.json())
+        .then(data => {
+            let btcPrice = data.DISPLAY.CHANGEPCT24HOUR;
+            currencies.push(btcPrice)
+              console.log(btcPrice)
+            $("#precioMATICPercentage").append(`
+            <span class="card-price-move"> <strong> ${btcPrice}%</strong> </span>
+         `)
+            
+        });
+        }, 10);
+
+setTimeout(function() {
     //DOLAR
     precioDOLAR = document.getElementById("precioDOLAR")
     document.getElementById("precioDOLAR")
@@ -116,6 +342,61 @@ setTimeout(function() {
      `) 
     } );}, 250);
 
+
+
+//USDT
+
+setTimeout(function() {
+    precioEthereum = document.getElementById("precioUSDT")
+    
+    document.getElementById("precioUSDT")
+    fetch('https://min-api.cryptocompare.com/data/generateAvg?fsym=USDT&tsym=USD&e=Kraken')
+    .then(response => response.json())
+    .then(data => {
+        let btcPrice = data.RAW.PRICE;
+        currencies.push(btcPrice)
+          console.log(btcPrice)
+        $("#precioUSDT").append(`
+        <span class="card-price"> <strong> $${btcPrice}</strong> </span>
+     `)
+        
+    });
+    }, 10);
+
+    setTimeout(function() {
+        precioEthereum = document.getElementById("precioUSDTMove")
+        
+        document.getElementById("precioUSDTMove")
+        fetch('https://min-api.cryptocompare.com/data/generateAvg?fsym=USDT&tsym=USD&e=Kraken')
+        .then(response => response.json())
+        .then(data => {
+            let btcPrice = data.DISPLAY.CHANGE24HOUR;
+            currencies.push(btcPrice)
+              console.log(btcPrice)
+            $("#precioUSDTMove").append(`
+            <span class="card-price-move"> <strong> ${btcPrice}</strong> </span>
+         `)
+            
+        });
+        }, 10);
+
+        
+    setTimeout(function() {
+        precioEthereum = document.getElementById("precioUSDTPercentage")
+        
+        document.getElementById("precioUSDTPercentage")
+        fetch('https://min-api.cryptocompare.com/data/generateAvg?fsym=USDT&tsym=USD&e=Kraken')
+        .then(response => response.json())
+        .then(data => {
+            let btcPrice = data.DISPLAY.CHANGEPCT24HOUR;
+            currencies.push(btcPrice)
+              console.log(btcPrice)
+            $("#precioUSDTPercentage").append(`
+            <span class="card-price-move"> <strong> ${btcPrice}%</strong> </span>
+         `)
+            
+        });
+        }, 10);
 ////////////////////////////////////////
 ////////////////////////////////////////
 
@@ -148,11 +429,11 @@ form.addEventListener("submit", function(e) {
      $("#nuevaMoneda").append( `
         
         <div class="row2">
-        <p class="subtit" id="txName"> ${moneda.nombre}</p>
-        <p class="subtit" id="txInversion"> ${"U$D" + (moneda.precio * moneda.holding)}</p>
-        <p class="subtit" id="txPrecio"> ${"U$D" + moneda.precio} </p>
-        <p class="subtit" id="txHoldings"> ${moneda.holding + " " + moneda.nombre} </p>
-        <p class="subtit" id="txArs"> ${"AR$"+ (moneda.pesosHolding)} </p>
+        <p class="subtit col-lg-2" id="txName"> ${moneda.nombre}</p>
+        <p class="subtit col-lg-2" id="txInversion"> ${"U$D" + (moneda.precio * moneda.holding)}</p>
+        <p class="subtit col-lg-2" id="txPrecio"> ${"U$D" + moneda.precio} </p>
+        <p class="subtit col-lg-2" id="txHoldings"> ${moneda.holding + " " + moneda.nombre} </p>
+        <p class="subtit col-lg-2" id="txArs"> ${"AR$"+ (moneda.pesosHolding)} </p>
         </div>
         
             `);
@@ -166,4 +447,18 @@ form.addEventListener("submit", function(e) {
 
             // localStorage.setItem("txs", JSON.stringify(txs));
     
+});
+
+
+fetch("https://api-football-v1.p.rapidapi.com/v3/leagues?country=England", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "api-football-v1.p.rapidapi.com",
+		"x-rapidapi-key": "07d5d6dac9mshf67f3f2be0a22b8p16c05djsnac5f98bc055c"
+	}
+})
+.then(response => response.json())
+.then (data => {
+
+        console.log(data)
 });

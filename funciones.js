@@ -17,31 +17,5 @@ if (nombre.value == "ETH"){
     document.getElementById("precio").value = currencies[3];
 }; 
 
-
-
-
-
-// function cambiarprecio() {
-//     let inputNombre = document.getElementById("nombre");
-//     let nombres = document.getElementById("nombre").value;
-
-//     document.getElementById('precio').innerHTML = `${inputNombre.value}`
-
-
-//     }
-
-// const selectElement = document.querySelector('#nombre');
-
-// selectElement.addEventListener('change', (event) => {
-//     const resultado = document.querySelector('#precio');
-//     resultado.textContent = `Te gusta el sabor ${event.target.value}`;
-// });
-
-//  var auto_refresh = setInterval(
-//     function()
-//      {
-//     $('#precio').fadeOut("fast").load('precio.value').fadeIn("slow");
-//      }, 1000);
-
 }, 500);
 
