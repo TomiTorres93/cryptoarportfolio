@@ -257,7 +257,8 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    transition:  background-color 800ms ease;
+    transition: display background-color 800ms ease;
+
 }
 
 .card-dark {
@@ -371,4 +372,54 @@ body {
     margin: 0 auto;
     border-radius: 10px;
 
+}
+
+.minicard-cont {
+    @extend %flexbox-row;
+    flex-wrap: wrap;
+    margin-left: 2rem;
+    
+    
+    
+}
+
+.minicard {
+    width: 3rem;
+    text-align: center;
+    background-color: rgb(255, 255, 255, 90%);
+    font-size: 0.6rem;
+    margin: 5rem 0.5rem 2rem 0.5rem;
+    border-radius: 10px;
+    border: 0px;
+    transition: 0.2s all;
+    cursor: grab;
+    display: none;
+
+    &:hover {
+        background-color: nth($color, 1);
+        border: nth($color, 2);
+        color: white;
+    }
+}
+
+.minicardhide {
+    display: none;
+}
+
+.minicarddisplay{
+    display: block;
+}
+
+.btncross {
+    color: nth($color, 1);
+    background: none;
+    border: none;
+    font-size: 0.7rem;
+    position: relative;
+    bottom: 1rem;
+    cursor: pointer;
+}
+
+.titcross {
+    @extend %flexbox-row;
 }

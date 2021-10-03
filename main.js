@@ -47,6 +47,8 @@ darkmodebutton.addEventListener('click', function () {
 });
 
 
+
+
 // COTIZACIONES
 //ETH 
 setTimeout(function() {

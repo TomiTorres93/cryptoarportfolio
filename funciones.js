@@ -19,3 +19,41 @@ if (nombre.value == "ETH"){
 
 }, 500);
 
+
+
+// Agregar y quitar monedas del dashboard
+
+// ETHCARD - ELIMINA LA CARD
+
+const ethcard = document.getElementById('ethcard') 
+
+
+btncross.addEventListener('click', function () {
+   if (ethcard.classList.contains('minicardhide')) {
+    ethcard.classList.remove('minicardhide');
+
+    } else {
+        ethcard.classList.add('minicardhide');
+        ethminicard.classList.add('minicarddisplay');
+    }
+
+});
+
+// LA AGREGA DESDE LA MINICARD DE ARRIBA
+
+const ethminicard = document.getElementById('ethminicard') 
+
+
+ethminicard.addEventListener('click', function () {
+   if (ethcard.classList.contains('minicardhide')) {
+    ethcard.classList.remove('minicardhide');
+    ethminicard.classList.remove('minicarddisplay');
+
+
+    } else {
+        ethcard.classList.add('minicardhide');
+
+    }
+
+});
+
