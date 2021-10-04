@@ -316,7 +316,7 @@ setTimeout(function() {
         precioEthereum = document.getElementById("precioMATICPercentage")
         
         document.getElementById("precioMATICPercentage")
-        fetch('https://min-api.cryptocompare.com/data/generateAvg?fsym=ADA&tsym=USD&e=Kraken')
+        fetch('https://min-api.cryptocompare.com/data/generateAvg?fsym=MATIC&tsym=USD&e=Kraken')
         .then(response => response.json())
         .then(data => {
             let btcPrice = data.DISPLAY.CHANGEPCT24HOUR;
@@ -328,6 +328,63 @@ setTimeout(function() {
             
         });
         }, 10);
+
+
+
+//SOL
+
+setTimeout(function() {
+    precioEthereum = document.getElementById("precioSOL")
+    
+    document.getElementById("precioSOL")
+    fetch('https://min-api.cryptocompare.com/data/generateAvg?fsym=SOL&tsym=USD&e=Kraken')
+    .then(response => response.json())
+    .then(data => {
+        let cakePrice = data.RAW.PRICE;
+        currencies.push(cakePrice)
+          console.log(cakePrice)
+        $("#precioSOL").append(`
+        <span class="card-price"> <strong> $${cakePrice}</strong> </span>
+     `)
+        
+    });
+    }, 10);
+
+    setTimeout(function() {
+        precioEthereum = document.getElementById("precioSOLMove")
+        
+        document.getElementById("precioSOLMove")
+        fetch('https://min-api.cryptocompare.com/data/generateAvg?fsym=SOL&tsym=USD&e=Kraken')
+        .then(response => response.json())
+        .then(data => {
+            let cakePrice = data.DISPLAY.CHANGE24HOUR;
+            currencies.push(cakePrice)
+              console.log(cakePrice)
+            $("#precioSOLMove").append(`
+            <span class="card-price-move"> <strong> ${cakePrice}</strong> </span>
+         `)
+            
+        });
+        }, 10);
+
+        
+    setTimeout(function() {
+        precioEthereum = document.getElementById("precioSOLPercentage")
+        
+        document.getElementById("precioSOLPercentage")
+        fetch('https://min-api.cryptocompare.com/data/generateAvg?fsym=SOL&tsym=USD&e=Kraken')
+        .then(response => response.json())
+        .then(data => {
+            let cakePrice = data.DISPLAY.CHANGEPCT24HOUR;
+            currencies.push(cakePrice)
+              console.log(cakePrice)
+            $("#precioSOLPercentage").append(`
+            <span class="card-price-move"> <strong> ${cakePrice}%</strong> </span>
+         `)
+            
+        });
+        }, 10);
+
 
 setTimeout(function() {
     //DOLAR
@@ -399,6 +456,23 @@ setTimeout(function() {
             
         });
         }, 10);
+
+
+        setTimeout(function() {
+          precioGasEthereum = document.getElementById("precioGAS")
+          
+          document.getElementById("precioGAS")
+          fetch('https://ethgas.watch/api/gas')
+          .then(response => response.json())
+          .then(data => {
+              let ethgasPrice = data.fast.gwei;
+              currencies.push(ethgasPrice)
+                console.log(ethgasPrice)
+              $("#precioGAS").append(`
+              <span class="topbartext"> <strong> ${ethgasPrice} GWEI</strong> </span>           `)
+              
+          });
+          }, 10);        
 ////////////////////////////////////////
 ////////////////////////////////////////
 

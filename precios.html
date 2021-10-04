@@ -25,7 +25,7 @@
 <body id="bgdark">
 
     <div  class="top-bar">
-        《 argentfolio es un producto desarrollado por Tomás Torres para la comisión-16840-j-online. 》 ETH:&nbsp; <span id="precioEthereum"></span> &nbsp;&nbsp; BTC:&nbsp; <span id="precioBitcoin"></span> &nbsp;&nbsp; ADA:&nbsp; <span id="precioADA"></span> &nbsp;&nbsp; MATIC:&nbsp; <span id="precioMATIC"></span> &nbsp;&nbsp; DÓLAR BLUE:&nbsp; <span id="precioDOLAR"></span>          
+        《 argentfolio es un producto desarrollado por Tomás Torres para la comisión-16840-j-online. 》 ETH:&nbsp; <span id="precioEthereum"></span> &nbsp;<span class="topbartext">/</span>&nbsp; BTC:&nbsp; <span id="precioBitcoin"></span> &nbsp;<span class="topbartext">/</span>&nbsp; ADA:&nbsp; <span id="precioADA"></span> &nbsp;<span class="topbartext">/</span>&nbsp; MATIC:&nbsp; <span id="precioMATIC"></span> &nbsp; <span class="topbartext">/</span> &nbsp; DÓLAR BLUE:&nbsp; <span id="precioDOLAR"></span> &nbsp;<span class="topbartext">/</span>&nbsp; ETH GAS:&nbsp; <span id="precioGAS"></span>             
                 
   
     <button class="darkmodebutton" id="darkmodebutton"><img class="luna-button" src="images\luna.png" alt=""></button>
@@ -42,7 +42,7 @@
         <button class="minicard" id="ethminicard">
             <p>ETH</p>
         </button>
-        <button class="minicard">
+        <button class="minicard" id="btcminicard">
             <p>BTC</p>
         </button>
         <button class="minicard">
@@ -63,10 +63,10 @@
             </div>
         </div>
 
-           <!-- ETH -->
+           <!-- BTC -->
            <div>
-            <div class="card card-glow">
-                <p class="card-tit">BTC</p>
+            <div class="card card-glow" id="btccard">
+                <div class="titcross"><p class="card-tit">BTC</p> <button class="btncross" id="btncrossbtc">X</button> </div>
                 <div class="card-price-cont"><span id="precioBTC2"></span></div>
                 <div class="moveBG">
                     <div><span id="up"></span> <span id="down"></span><span id="precioBTCMove"></span></div>
@@ -102,14 +102,14 @@
             </div>
         </div>
 
-             <!-- USDT -->
+    <!-- SOLANA -->
            <div>
             <div class="card">
-                <p class="card-tit">USDT</p>
-                <div class="card-price-cont"><span id="precioUSDT"></span></div>
+                <p class="card-tit">SOL</p>
+                <div class="card-price-cont"><span id="precioSOL"></span></div>
                 <div class="moveBG">
-                    <div><span id="up"></span> <span id="down"></span><span id="precioUSDTMove"></span></div>
-                    <div> <span id="precioUSDTPercentage"></span></div>
+                    <div><span id="up"></span> <span id="down"></span><span id="precioSOLMove"></span></div>
+                    <div> <span id="precioSOLPercentage"></span></div>
                 </div>
 
             </div>
