@@ -21,19 +21,27 @@ if (nombre.value == "ETH"){
 
 setTimeout(function() {}, 500);
 
+
+
+
+
+
+
+
+
 // Agregar y quitar monedas del dashboard
 
 // ETHCARD - ELIMINA LA CARD
 
-const ethcard = document.getElementById('ethcard') 
+const ethcard2 = document.querySelector('.ethcard')
 
 
 btncross.addEventListener('click', function () {
-   if (ethcard.classList.contains('minicardhide')) {
-    ethcard.classList.remove('minicardhide');
+   if (ethcard2.classList.contains('minicardhide')) {
+    ethcard2.classList.remove('minicardhide');
 
     } else {
-        ethcard.classList.add('minicardhide');
+        ethcard2.classList.add('minicardhide');
         ethminicard.classList.add('minicarddisplay');
     }
 
@@ -45,15 +53,15 @@ const ethminicard = document.getElementById('ethminicard')
 
 
 ethminicard.addEventListener('click', function () {
-   if (ethcard.classList.contains('minicardhide')) {
+   if (ethcard2.classList.contains('minicardhide')) {
 
 
-    ethcard.classList.remove('minicardhide');
+    ethcard2.classList.remove('minicardhide');
     ethminicard.classList.remove('minicarddisplay');
 
     } else {
         
-        ethcard.classList.add('minicardhide');
+        ethcard2.classList.add('minicardhide');
     
     }
 
@@ -62,15 +70,15 @@ ethminicard.addEventListener('click', function () {
 
 // BTCCARD - ELIMINA LA CARD
 
-const btccard = document.getElementById('btccard') 
+const btccard2 = document.querySelector('#btccard') 
 
 
 btncrossbtc.addEventListener('click', function () {
-   if (btccard.classList.contains('minicardhide')) {
-    btccard.classList.remove('minicardhide');
+   if (btccard2.classList.contains('minicardhide')) {
+    btccard2.classList.remove('minicardhide');
 
     } else {
-        btccard.classList.add('minicardhide');
+        btccard2.classList.add('minicardhide');
         btcminicard.classList.add('minicarddisplay');
     }
 
@@ -82,10 +90,10 @@ const btcminicard = document.getElementById('btcminicard')
 
 
 btcminicard.addEventListener('click', function () {
-   if (btccard.classList.contains('minicardhide')) {
+   if (btccard2.classList.contains('minicardhide')) {
 
 
-    btccard.classList.remove('minicardhide');
+    btccard2.classList.remove('minicardhide');
     btcminicard.classList.remove('minicarddisplay');
 
     } else {
@@ -96,3 +104,79 @@ btcminicard.addEventListener('click', function () {
 
 });
 
+
+// adacard - ELIMINA LA CARD
+
+const adacard2 = document.querySelector('#adacard') 
+
+
+btncrossada.addEventListener('click', function () {
+   if (adacard2.classList.contains('minicardhide')) {
+    adacard2.classList.remove('minicardhide');
+
+    } else {
+        adacard2.classList.add('minicardhide');
+        adaminicard.classList.add('minicarddisplay');
+    }
+
+});
+
+// ADA LA AGREGA DESDE LA MINICARD DE ARRIBA
+
+const adaminicard = document.getElementById('adaminicard') 
+
+
+adaminicard.addEventListener('click', function () {
+   if (adacard2.classList.contains('minicardhide')) {
+
+
+    adacard2.classList.remove('minicardhide');
+    adaminicard.classList.remove('minicarddisplay');
+
+    } else {
+        
+        btccard.classList.add('minicardhide');
+    
+    }
+
+});
+
+
+
+
+
+// FONDOS ROJO/VERDE PARA LAS CARDS
+setTimeout(function() {
+const ethcardcolor = document.querySelector('.ethpricecolor') 
+const ethpricecolor = currencies[0]
+
+console.log(ethpricecolor)
+
+if (ethpricecolor > 0) {
+    ethcardcolor.classList.add('fondoverde')
+} else {
+    ethcardcolor.classList.add('fondorojo')
+}
+
+
+const adacardcolor = document.querySelector('.adapricecolor') 
+const adapricecolor = currencies[31]
+
+console.log(adapricecolor)
+
+
+if (adapricecolor > 0) {
+    adacardcolor.classList.add('fondoverde')
+} else {
+    adacardcolor.classList.add('fondorojo')
+}
+
+
+
+
+
+
+
+
+
+}, 700);

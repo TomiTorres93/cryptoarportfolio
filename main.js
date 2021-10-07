@@ -1,5 +1,6 @@
 
 const currencies = []
+
 setTimeout(function() {
 let precioDOLAR = currencies[4];
 let usdHolding = holding * precio;
@@ -7,9 +8,9 @@ let pesosHolding = usdHolding * precioDOLAR;
 
 const moneda = new Moneda (nombre, precio, holding, usdHolding, pesosHolding);
 
-
-console.log(currencies[4])
-}, 600);
+console.log(currencies)
+}, 700);
+console.log(currencies)
 //ANIMACIONES
 $(() => {
     $("#p1").fadeOut(500)
@@ -25,26 +26,101 @@ $(() => {
 // DARKMODE 
 
 const bgdark = document.getElementById('bgdark') 
-const card = document.querySelector('.card')
+const ethcard = document.querySelector('.ethcard')
+const btccard = document.querySelector('.btccard')
+const adacard = document.querySelector('.adacard')
+const maticcard = document.querySelector('.maticcard')
+const cakecard = document.querySelector('.cakecard')
+const solcard = document.querySelector('.solcard')
+const bnbcard = document.querySelector('.bnbcard')
+const lunacard = document.querySelector('.lunacard')
+const dotcard = document.querySelector('.dotcard')
+const alcxcard = document.querySelector('.alcxcard')
+const spellcard = document.querySelector('.spellcard')
+const thetacard = document.querySelector('.thetacard')
+const aavecard = document.querySelector('.aavecard')
+const epscard = document.querySelector('.epscard')
+const celocard = document.querySelector('.celocard')
+const raycard = document.querySelector('.raycard')
+
 
 darkmodebutton.addEventListener('click', function () {
-   if (bgdark.classList.contains('bg-dark') && card.classList.contains('card-dark')) {
-       bgdark.classList.remove('bg-dark');
-       card.classList.remove('card-dark');
-
-    //    for (i = 0; i < 4; i++) {
-    //    card.classList.remove('card-dark');
-    // }
-    } else {
-        bgdark.classList.add('bg-dark');
-        card.classList.add('card-dark');
-
-    //     for (i = 0; i < 4; i++) {
-    //     card.classList.add('card-dark');
-    // }
-    }
-
+    bgdark.classList.toggle('bg-dark')
 });
+
+
+darkmodebutton.addEventListener('click', function () {
+  ethcard.classList.toggle('card-dark')
+});
+
+darkmodebutton.addEventListener('click', function () {
+  btccard.classList.toggle('card-dark')
+});
+
+darkmodebutton.addEventListener('click', function () {
+  adacard.classList.toggle('card-dark')
+});
+
+darkmodebutton.addEventListener('click', function () {
+  maticcard.classList.toggle('card-dark')
+});
+
+darkmodebutton.addEventListener('click', function () {
+  solcard.classList.toggle('card-dark')
+});
+
+darkmodebutton.addEventListener('click', function () {
+  cakecard.classList.toggle('card-dark')
+});
+
+darkmodebutton.addEventListener('click', function () {
+  bnbcard.classList.toggle('card-dark')
+});
+
+
+darkmodebutton.addEventListener('click', function () {
+  lunacard.classList.toggle('card-dark')
+});
+
+
+darkmodebutton.addEventListener('click', function () {
+  dotcard.classList.toggle('card-dark')
+});
+
+
+darkmodebutton.addEventListener('click', function () {
+  alcxcard.classList.toggle('card-dark')
+});
+
+
+darkmodebutton.addEventListener('click', function () {
+  spellcard.classList.toggle('card-dark')
+});
+
+
+darkmodebutton.addEventListener('click', function () {
+  thetacard.classList.toggle('card-dark')
+});
+
+darkmodebutton.addEventListener('click', function () {
+  aavecard.classList.toggle('card-dark')
+});
+
+darkmodebutton.addEventListener('click', function () {
+  epscard.classList.toggle('card-dark')
+});
+
+darkmodebutton.addEventListener('click', function () {
+  celocard.classList.toggle('card-dark')
+});
+
+darkmodebutton.addEventListener('click', function () {
+  raycard.classList.toggle('card-dark')
+});
+
+
+
+
 
 
 
@@ -472,15 +548,608 @@ setTimeout(function() {
               <span class="topbartext"> <strong> ${ethgasPrice} GWEI</strong> </span>           `)
               
           });
-          }, 10);        
+          }, 10);
+//CAKE
+
+setTimeout(function() {
+  precioEthereum = document.getElementById("precioCAKE")
+  
+  document.getElementById("precioCAKE")
+  fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=CAKE&tsyms=USD,EURn')
+  .then(response => response.json())
+  .then(data => {
+      let btcPrice = data.RAW.CAKE.USD.PRICE;
+      currencies.push(btcPrice)
+        console.log(btcPrice)
+      $("#precioCAKE").append(`
+      <span class="card-price"> <strong> $${btcPrice}</strong> </span>
+   `)
+      
+  });
+  }, 10);
+
+  setTimeout(function() {
+      precioEthereum = document.getElementById("precioCAKEMove")
+      
+      document.getElementById("precioCAKEMove")
+      fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=CAKE&tsyms=USD,EUR')
+      .then(response => response.json())
+      .then(data => {
+          let btcPrice = data.DISPLAY.CAKE.USD.CHANGE24HOUR;
+          currencies.push(btcPrice)
+            console.log(btcPrice)
+          $("#precioCAKEMove").append(`
+          <span class="card-price-move"> <strong> ${btcPrice}</strong> </span>
+       `)
+          
+      });
+      }, 10);
+
+      
+  setTimeout(function() {
+      precioEthereum = document.getElementById("precioCAKEPercentage")
+      
+      document.getElementById("precioCAKEPercentage")
+      fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=CAKE&tsyms=USD,EUR')
+      .then(response => response.json())
+      .then(data => {
+          let btcPrice = data.DISPLAY.CAKE.USD.CHANGEPCT24HOUR;
+          currencies.push(btcPrice)
+            console.log(btcPrice)
+          $("#precioCAKEPercentage").append(`
+          <span class="card-price-move"> <strong> ${btcPrice}%</strong> </span>
+       `)
+          
+      });
+      }, 10);
+
+//BNB
+
+setTimeout(function() {
+  precioEthereum = document.getElementById("precioBNB")
+  
+  document.getElementById("precioBNB")
+  fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BNB&tsyms=USD,EURn')
+  .then(response => response.json())
+  .then(data => {
+      let btcPrice = data.RAW.BNB.USD.PRICE;
+      currencies.push(btcPrice)
+        console.log(btcPrice)
+      $("#precioBNB").append(`
+      <span class="card-price"> <strong> $${btcPrice}</strong> </span>
+   `)
+      
+  });
+  }, 10);
+
+  setTimeout(function() {
+      precioEthereum = document.getElementById("precioBNBMove")
+      
+      document.getElementById("precioBNBMove")
+      fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BNB&tsyms=USD,EUR')
+      .then(response => response.json())
+      .then(data => {
+          let btcPrice = data.DISPLAY.BNB.USD.CHANGE24HOUR;
+          currencies.push(btcPrice)
+            console.log(btcPrice)
+          $("#precioBNBMove").append(`
+          <span class="card-price-move"> <strong> ${btcPrice}</strong> </span>
+       `)
+          
+      });
+      }, 10);
+
+      
+  setTimeout(function() {
+      precioEthereum = document.getElementById("precioBNBPercentage")
+      
+      document.getElementById("precioBNBPercentage")
+      fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BNB&tsyms=USD,EUR')
+      .then(response => response.json())
+      .then(data => {
+          let btcPrice = data.DISPLAY.BNB.USD.CHANGEPCT24HOUR;
+          currencies.push(btcPrice)
+            console.log(btcPrice)
+          $("#precioBNBPercentage").append(`
+          <span class="card-price-move"> <strong> ${btcPrice}%</strong> </span>
+       `)
+          
+      });
+      }, 10);
+
+ //LUNA
+
+setTimeout(function() {
+  precioEthereum = document.getElementById("precioLUNA")
+  
+  document.getElementById("precioLUNA")
+  fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=LUNA&tsyms=USD,EURn')
+  .then(response => response.json())
+  .then(data => {
+      let btcPrice = data.RAW.LUNA.USD.PRICE;
+      currencies.push(btcPrice)
+        console.log(btcPrice)
+      $("#precioLUNA").append(`
+      <span class="card-price"> <strong> $${btcPrice}</strong> </span>
+   `)
+      
+  });
+  }, 10);
+
+  setTimeout(function() {
+      precioEthereum = document.getElementById("precioLUNAMove")
+      
+      document.getElementById("precioLUNAMove")
+      fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=LUNA&tsyms=USD,EUR')
+      .then(response => response.json())
+      .then(data => {
+          let btcPrice = data.DISPLAY.LUNA.USD.CHANGE24HOUR;
+          currencies.push(btcPrice)
+            console.log(btcPrice)
+          $("#precioLUNAMove").append(`
+          <span class="card-price-move"> <strong> ${btcPrice}</strong> </span>
+       `)
+          
+      });
+      }, 10);
+
+      
+  setTimeout(function() {
+      precioEthereum = document.getElementById("precioLUNAPercentage")
+      
+      document.getElementById("precioLUNAPercentage")
+      fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=LUNA&tsyms=USD,EUR')
+      .then(response => response.json())
+      .then(data => {
+          let btcPrice = data.DISPLAY.LUNA.USD.CHANGEPCT24HOUR;
+          currencies.push(btcPrice)
+            console.log(btcPrice)
+          $("#precioLUNAPercentage").append(`
+          <span class="card-price-move"> <strong> ${btcPrice}%</strong> </span>
+       `)
+          
+      });
+      }, 10);     
+
+ //DOT
+
+ setTimeout(function() {
+  precioEthereum = document.getElementById("precioDOT")
+  
+  document.getElementById("precioDOT")
+  fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=DOT&tsyms=USD,EURn')
+  .then(response => response.json())
+  .then(data => {
+      let btcPrice = data.RAW.DOT.USD.PRICE;
+      currencies.push(btcPrice)
+        console.log(btcPrice)
+      $("#precioDOT").append(`
+      <span class="card-price"> <strong> $${btcPrice}</strong> </span>
+   `)
+      
+  });
+  }, 10);
+
+  setTimeout(function() {
+      precioEthereum = document.getElementById("precioDOTMove")
+      
+      document.getElementById("precioDOTMove")
+      fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=DOT&tsyms=USD,EUR')
+      .then(response => response.json())
+      .then(data => {
+          let btcPrice = data.DISPLAY.DOT.USD.CHANGE24HOUR;
+          currencies.push(btcPrice)
+            console.log(btcPrice)
+          $("#precioDOTMove").append(`
+          <span class="card-price-move"> <strong> ${btcPrice}</strong> </span>
+       `)
+          
+      });
+      }, 10);
+
+      
+  setTimeout(function() {
+      precioEthereum = document.getElementById("precioDOTPercentage")
+      
+      document.getElementById("precioDOTPercentage")
+      fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=DOT&tsyms=USD,EUR')
+      .then(response => response.json())
+      .then(data => {
+          let btcPrice = data.DISPLAY.DOT.USD.CHANGEPCT24HOUR;
+          currencies.push(btcPrice)
+            console.log(btcPrice)
+          $("#precioDOTPercentage").append(`
+          <span class="card-price-move"> <strong> ${btcPrice}%</strong> </span>
+       `)
+          
+      });
+      }, 10);     
+                     
+ //ALCX
+
+ setTimeout(function() {
+  precioEthereum = document.getElementById("precioALCX")
+  
+  document.getElementById("precioALCX")
+  fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ALCX&tsyms=USD,EURn')
+  .then(response => response.json())
+  .then(data => {
+      let btcPrice = data.RAW.ALCX.USD.PRICE;
+      currencies.push(btcPrice)
+        console.log(btcPrice)
+      $("#precioALCX").append(`
+      <span class="card-price"> <strong> $${btcPrice}</strong> </span>
+   `)
+      
+  });
+  }, 10);
+
+  setTimeout(function() {
+      precioEthereum = document.getElementById("precioALCXMove")
+      
+      document.getElementById("precioALCXMove")
+      fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ALCX&tsyms=USD,EUR')
+      .then(response => response.json())
+      .then(data => {
+          let btcPrice = data.DISPLAY.ALCX.USD.CHANGE24HOUR;
+          currencies.push(btcPrice)
+            console.log(btcPrice)
+          $("#precioALCXMove").append(`
+          <span class="card-price-move"> <strong> ${btcPrice}</strong> </span>
+       `)
+          
+      });
+      }, 10);
+
+      
+  setTimeout(function() {
+      precioEthereum = document.getElementById("precioALCXPercentage")
+      
+      document.getElementById("precioALCXPercentage")
+      fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ALCX&tsyms=USD,EUR')
+      .then(response => response.json())
+      .then(data => {
+          let btcPrice = data.DISPLAY.ALCX.USD.CHANGEPCT24HOUR;
+          currencies.push(btcPrice)
+            console.log(btcPrice)
+          $("#precioALCXPercentage").append(`
+          <span class="card-price-move"> <strong> ${btcPrice}%</strong> </span>
+       `)
+          
+      });
+      }, 10);     
+
+ //SPELL
+
+ setTimeout(function() {
+  precioEthereum = document.getElementById("precioSPELL")
+  
+  document.getElementById("precioSPELL")
+  fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=SPELL&tsyms=USD,EURn')
+  .then(response => response.json())
+  .then(data => {
+      let btcPrice = data.RAW.SPELL.USD.PRICE.toFixed(4);
+      currencies.push(btcPrice)
+        console.log(btcPrice)
+      $("#precioSPELL").append(`
+      <span class="card-price"> <strong> $${btcPrice}</strong> </span>
+   `)
+      
+  });
+  }, 10);
+
+  setTimeout(function() {
+      precioEthereum = document.getElementById("precioSPELLMove")
+      
+      document.getElementById("precioSPELLMove")
+      fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=SPELL&tsyms=USD,EUR')
+      .then(response => response.json())
+      .then(data => {
+          let btcPrice = data.DISPLAY.SPELL.USD.CHANGE24HOUR;
+          currencies.push(btcPrice)
+            console.log(btcPrice)
+          $("#precioSPELLMove").append(`
+          <span class="card-price-move"> <strong> ${btcPrice}</strong> </span>
+       `)
+          
+      });
+      }, 10);
+
+      
+  setTimeout(function() {
+      precioEthereum = document.getElementById("precioSPELLPercentage")
+      
+      document.getElementById("precioSPELLPercentage")
+      fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=SPELL&tsyms=USD,EUR')
+      .then(response => response.json())
+      .then(data => {
+          let btcPrice = data.DISPLAY.SPELL.USD.CHANGEPCT24HOUR;
+          currencies.push(btcPrice)
+            console.log(btcPrice)
+          $("#precioSPELLPercentage").append(`
+          <span class="card-price-move"> <strong> ${btcPrice}%</strong> </span>
+       `)
+          
+      });
+      }, 10);   
+      
+ //THETA
+
+ setTimeout(function() {
+  precioEthereum = document.getElementById("precioTHETA")
+  
+  document.getElementById("precioTHETA")
+  fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=THETA&tsyms=USD,EURn')
+  .then(response => response.json())
+  .then(data => {
+      let btcPrice = data.RAW.THETA.USD.PRICE;
+      currencies.push(btcPrice)
+        console.log(btcPrice)
+      $("#precioTHETA").append(`
+      <span class="card-price"> <strong> $${btcPrice}</strong> </span>
+   `)
+      
+  });
+  }, 10);
+
+  setTimeout(function() {
+      precioEthereum = document.getElementById("precioTHETAMove")
+      
+      document.getElementById("precioTHETAMove")
+      fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=THETA&tsyms=USD,EUR')
+      .then(response => response.json())
+      .then(data => {
+          let btcPrice = data.DISPLAY.THETA.USD.CHANGE24HOUR;
+          currencies.push(btcPrice)
+            console.log(btcPrice)
+          $("#precioTHETAMove").append(`
+          <span class="card-price-move"> <strong> ${btcPrice}</strong> </span>
+       `)
+          
+      });
+      }, 10);
+
+      
+  setTimeout(function() {
+      precioEthereum = document.getElementById("precioTHETAPercentage")
+      
+      document.getElementById("precioTHETAPercentage")
+      fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=THETA&tsyms=USD,EUR')
+      .then(response => response.json())
+      .then(data => {
+          let btcPrice = data.DISPLAY.THETA.USD.CHANGEPCT24HOUR;
+          currencies.push(btcPrice)
+            console.log(btcPrice)
+          $("#precioTHETAPercentage").append(`
+          <span class="card-price-move"> <strong> ${btcPrice}%</strong> </span>
+       `)
+          
+      });
+      }, 10);   
+      
+
+ //AAVE
+
+ setTimeout(function() {
+  precioEthereum = document.getElementById("precioAAVE")
+  
+  document.getElementById("precioAAVE")
+  fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=AAVE&tsyms=USD,EURn')
+  .then(response => response.json())
+  .then(data => {
+      let btcPrice = data.RAW.AAVE.USD.PRICE;
+      currencies.push(btcPrice)
+      $("#precioAAVE").append(`
+      <span class="card-price"> <strong> $${btcPrice}</strong> </span>
+   `)
+      
+  });
+  }, 10);
+
+  setTimeout(function() {
+      precioEthereum = document.getElementById("precioAAVEMove")
+      
+      document.getElementById("precioAAVEMove")
+      fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=AAVE&tsyms=USD,EUR')
+      .then(response => response.json())
+      .then(data => {
+          let btcPrice = data.DISPLAY.AAVE.USD.CHANGE24HOUR;
+          currencies.push(btcPrice)
+          $("#precioAAVEMove").append(`
+          <span class="card-price-move"> <strong> ${btcPrice}</strong> </span>
+       `)
+          
+      });
+      }, 10);
+
+      
+  setTimeout(function() {
+      precioEthereum = document.getElementById("precioAAVEPercentage")
+      
+      document.getElementById("precioAAVEPercentage")
+      fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=AAVE&tsyms=USD,EUR')
+      .then(response => response.json())
+      .then(data => {
+          let btcPrice = data.DISPLAY.AAVE.USD.CHANGEPCT24HOUR;
+          currencies.push(btcPrice)
+          $("#precioAAVEPercentage").append(`
+          <span class="card-price-move"> <strong> ${btcPrice}%</strong> </span>
+       `)
+          
+      });
+      }, 10);   
+      
+
+ //EPS
+
+ setTimeout(function() {
+  precioEthereum = document.getElementById("precioEPS")
+  
+  document.getElementById("precioEPS")
+  fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ELLIP&tsyms=USD,EURn')
+  .then(response => response.json())
+  .then(data => {
+      let btcPrice = data.RAW.EPS.USD.PRICE;
+      currencies.push(btcPrice)
+      $("#precioEPS").append(`
+      <span class="card-price"> <strong> $${btcPrice}</strong> </span>
+   `)
+      
+  });
+  }, 10);
+
+  setTimeout(function() {
+      precioEthereum = document.getElementById("precioEPSMove")
+      
+      document.getElementById("precioEPSMove")
+      fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ELLIP&tsyms=USD,EUR')
+      .then(response => response.json())
+      .then(data => {
+          let btcPrice = data.DISPLAY.EPS.USD.CHANGE24HOUR;
+          currencies.push(btcPrice)
+          $("#precioEPSMove").append(`
+          <span class="card-price-move"> <strong> ${btcPrice}</strong> </span>
+       `)
+          
+      });
+      }, 10);
+
+      
+  setTimeout(function() {
+      precioEthereum = document.getElementById("precioEPSPercentage")
+      
+      document.getElementById("precioEPSPercentage")
+      fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ELLIP&tsyms=USD,EUR')
+      .then(response => response.json())
+      .then(data => {
+          let btcPrice = data.DISPLAY.EPS.USD.CHANGEPCT24HOUR;
+          currencies.push(btcPrice)
+          $("#precioEPSPercentage").append(`
+          <span class="card-price-move"> <strong> ${btcPrice}%</strong> </span>
+       `)
+          
+      });
+      }, 10);   
+      
+ //CELO
+
+ setTimeout(function() {
+  precioEthereum = document.getElementById("precioCELO")
+  
+  document.getElementById("precioCELO")
+  fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=CELO&tsyms=USD,EURn')
+  .then(response => response.json())
+  .then(data => {
+      let btcPrice = data.RAW.CELO.USD.PRICE;
+      currencies.push(btcPrice)
+      $("#precioCELO").append(`
+      <span class="card-price"> <strong> $${btcPrice}</strong> </span>
+   `)
+      
+  });
+  }, 10);
+
+  setTimeout(function() {
+      precioEthereum = document.getElementById("precioCELOMove")
+      
+      document.getElementById("precioCELOMove")
+      fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=CELO&tsyms=USD,EUR')
+      .then(response => response.json())
+      .then(data => {
+          let btcPrice = data.DISPLAY.CELO.USD.CHANGE24HOUR;
+          currencies.push(btcPrice)
+          $("#precioCELOMove").append(`
+          <span class="card-price-move"> <strong> ${btcPrice}</strong> </span>
+       `)
+          
+      });
+      }, 10);
+
+      
+  setTimeout(function() {
+      precioEthereum = document.getElementById("precioCELOPercentage")
+      
+      document.getElementById("precioCELOPercentage")
+      fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=CELO&tsyms=USD,EUR')
+      .then(response => response.json())
+      .then(data => {
+          let btcPrice = data.DISPLAY.CELO.USD.CHANGEPCT24HOUR;
+          currencies.push(btcPrice)
+          $("#precioCELOPercentage").append(`
+          <span class="card-price-move"> <strong> ${btcPrice}%</strong> </span>
+       `)
+          
+      });
+      }, 10);   
+      
+ //RAY
+
+ setTimeout(function() {
+  precioEthereum = document.getElementById("precioRAY")
+  
+  document.getElementById("precioRAY")
+  fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=RAY&tsyms=USD,EUR')
+  .then(response => response.json())
+  .then(data => {
+      let btcPrice = data.RAW.RAY.USD.PRICE;
+      currencies.push(btcPrice)
+      $("#precioRAY").append(`
+      <span class="card-price"> <strong> $${btcPrice}</strong> </span>
+   `)
+      
+  });
+  }, 10);
+
+  setTimeout(function() {
+      precioEthereum = document.getElementById("precioRAYMove")
+      
+      document.getElementById("precioRAYMove")
+      fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=RAY&tsyms=USD,EUR')
+      .then(response => response.json())
+      .then(data => {
+          let btcPrice = data.DISPLAY.RAY.USD.CHANGE24HOUR;
+          currencies.push(btcPrice)
+          $("#precioRAYMove").append(`
+          <span class="card-price-move"> <strong> ${btcPrice}</strong> </span>
+       `)
+          
+      });
+      }, 10);
+
+      
+  setTimeout(function() {
+      precioEthereum = document.getElementById("precioRAYPercentage")
+      
+      document.getElementById("precioRAYPercentage")
+      fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=RAY&tsyms=USD,EUR')
+      .then(response => response.json())
+      .then(data => {
+          let btcPrice = data.DISPLAY.RAY.USD.CHANGEPCT24HOUR;
+          currencies.push(btcPrice)
+          $("#precioRAYPercentage").append(`
+          <span class="card-price-move"> <strong> ${btcPrice}%</strong> </span>
+       `)
+          
+      });
+      }, 15);   
+      
+
+
+
+
+
+
+
+
 ////////////////////////////////////////
 ////////////////////////////////////////
 
 
 // BOTONES ADD
 
-  
+const form = document.getElementById('form') 
 const addCoinButton = document.getElementById('addCoinButton') 
+
 form.addEventListener("submit", function(e) {
     e.preventDefault();
     let formValues = new FormData(e.target);
@@ -538,3 +1207,5 @@ fetch("https://api-football-v1.p.rapidapi.com/v3/leagues?country=England", {
 
         console.log(data)
 });
+
+
