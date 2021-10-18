@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
 
-  <!-- FONT - INTER- WORK SANS -->
+    <!-- FONT - INTER- WORK SANS -->
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
+    <link
+        href="https://fonts.googleapis.com/css2?family=BioRhyme:wght@200;300;400;700;800&family=Bungee+Hairline&family=Bungee+Inline&family=Bungee+Outline&family=Bungee+Shade&family=Changa:wght@200;300;400&family=Monofett&family=Six+Caps&family=Squada+One&display=swap"
+        rel="stylesheet">
 
     <title>Tu portfolio crypto argento</title>
 </head>
+
 <body id="bgdark">
 
-    <div  class="top-bar">
-        《 argentfolio es un producto desarrollado por Tomás Torres para la comisión-16840-j-online. 》 ETH:&nbsp; <span id="precioEthereum"></span> &nbsp;&nbsp; BTC:&nbsp; <span id="precioBitcoin"></span> &nbsp;&nbsp; ADA:&nbsp; <span id="precioADA"></span> &nbsp;&nbsp; MATIC:&nbsp; <span id="precioMATIC"></span> &nbsp;&nbsp; DÓLAR BLUE:&nbsp; <span id="precioDOLAR"></span>          
-                
-  
-    <button class="darkmodebutton" id="darkmodebutton"><img class="luna-button" src="images\luna.png" alt=""></button>
+    <div class="top-bar">
+        《 argentfolio es un producto desarrollado por Tomás Torres para la comisión-16840-j-online. 》 ETH:&nbsp; <span
+            id="precioEthereum"></span> &nbsp;<span class="topbartext">/</span>&nbsp; BTC:&nbsp; <span
+            id="precioBitcoin"></span> &nbsp;<span class="topbartext">/</span>&nbsp; ADA:&nbsp; <span
+            id="precioADA"></span> &nbsp;<span class="topbartext">/</span>&nbsp; MATIC:&nbsp; <span
+            id="precioMATIC"></span> &nbsp; <span class="topbartext">/</span> &nbsp; DÓLAR BLUE:&nbsp; <span
+            id="precioDOLAR"></span> &nbsp;<span class="topbartext">/</span>&nbsp; ETH GAS:&nbsp; <span
+            id="precioGAS"></span>
+
+
+        <button class="darkmodebutton" id="darkmodebutton"><img class="luna-button" src="images\luna.png"
+                alt=""></button>
     </div>
 
 
@@ -35,70 +51,395 @@
     <section class="navbar">
         <h1 id="p1" class="titulo">｛Argentfolio｝</h1>
         <p id="p2" class="titulo2">Tu portfolio crypto argento.</p>
-        <a href="precios.html" class="titulo2">charts</a>
     </section>
 
-    <section class="web-body">
-        <div class="portfolio-container">
-            <div class="portfolio-sections">
-                <p class="subtit col-lg-2"> Moneda </p>
-                <p class="subtit col-lg-2"> Inversión </p>
-                <p class="subtit col-lg-2"> Precio de compra</p>
-                <p class="subtit col-lg-2"> Holdings </p>
-                <p class="subtit col-lg-2"> ARS </p>
-                
+    <section class="minicard-cont">
+        <button class="minicard" id="ethminicard">
+            <p>ETH</p>
+        </button>
+        <button class="minicard" id="btcminicard">
+            <p>BTC</p>
+        </button>
+        <button class="minicard" id="adaminicard">
+            <p>ADA</p>
+        </button>
 
+        <button class="minicard" id="maticminicard">
+            <p>MATIC</p>
+        </button>
+
+        <button class="minicard" id="solminicard">
+            <p>SOL</p>
+        </button>
+
+        <button class="minicard" id="cakeminicard">
+            <p>CAKE</p>
+        </button>
+
+        <button class="minicard" id="bnbminicard">
+            <p>BNB</p>
+        </button>
+
+        <button class="minicard" id="lunaminicard">
+            <p>LUNA</p>
+        </button>
+
+        <button class="minicard" id="dotminicard">
+            <p>DOT</p>
+        </button>
+
+        <button class="minicard" id="alcxminicard">
+            <p>ALCX</p>
+        </button>
+    </section>
+    <section class="web-body-cards" id="nuevaMoneda">
+        <!-- ETH -->
+
+        <div class="card card-glow ethcard" id="ethcard">
+            <div class="titcross">
+                <p class="card-tit">ETH</p> <button class="btncross" id="btncrosseth">X</button>
             </div>
-            <div  class="nuevaMoneda portfolio-sections">
-                <div id="nuevaMoneda">
+            <!-- NOTEBOOK -->
+            <div class="ethHoldAddedCARD minicardhide" id="ethnotebook">
+                <span id="ethHoldAdded" class="ethHoldAdded"></span>
+                <div>
+                    <div id="localstorage"></div>
+                    <form action="" id="form">
+                        <input class="holdInput" type="text" id="myHold" name="myHold" placeholder="Anotar compra">
+
+                        <button class="addCoinButton" type="submit" value="+" id="addHold"> + </button>
+                    </form>
+                    <button class="miholdText" id="ethShowPrices">PRECIOS</button>
+                </div>
+            </div>
+
+            <div id="ethSTATS">
+                <div class="card-price-cont"><span id="precioEthereum2"></span></div>
+                <div class="moveBG ethpricecolor">
+                    <div><span id="up"></span> <span id="down"></span><span id="precioEthereumMove"></span></div>
+                    <div> <span id="precioEthereumPercentage"></span></div>
 
                 </div>
-
             </div>
 
-            <div class="portfolio-sections">
-            <!-- FORM + -->
-                <form action="" id="form">
-                    <select type="text" id="nombre" name="nombre" onChange="cambiarprecio()"> 
-                        <option value="ETH">ETH</option>
-                        <option value="BTC">BTC</option>
-                        <option value="ADA">ADA</option>
-                        <option value="MATIC">MATIC</option>
-                        <option value="DAI">DAI</option>
-                    </select>
-                    
-                    <input type="text" id="precio" class="precio" name="precio" placeholder="Precio de compra">
-                    
-                    <input type="text" id="holding" name="holding"
-                    placeholder="Cantidad de tokens">
-
-                    <input class="livePrice" type="date" id="fecha">
-
-                    <button class="addCoinButton" type="submit" value="Agregar" id="addCoinButton"> Agregar </button>
-                </form>
-
-     
-            </div>
+            <span id="ethShowNotebookBTN"><button class="miholdText" id="ethShowNotebook">NOTAS</button></span>
 
         </div>
-        
+
+
+        </div>
+
+
+        <!-- BTC -->
+
+        <div class="card card-glow btccard" id="btccard">
+            <div class="titcross">
+                <p class="card-tit">BTC</p> <button class="btncross" id="btncrossbtc">X</button>
+            </div>
+            <!-- NOTEBOOK -->
+            <div class="btcHoldAddedCARD minicardhide" id="btcnotebook">
+                <span id="btcHoldAdded" class="btcHoldAdded"></span>
+                <div>
+                    <div id="localstorage"></div>
+                    <form action="" id="form">
+                        <input class="holdInput" type="text" id="myHold" name="myHold" placeholder="Anotar compra">
+
+                        <button class="addCoinButton" type="submit" value="+" id="addHold"> + </button>
+                    </form>
+                    <button class="miholdText" id="btcShowPrices">PRECIOS</button>
+                </div>
+            </div>
+
+            <div id="btcSTATS">
+                <div class="card-price-cont"><span id="precioBTC2"></span></div>
+                <div class="moveBG btcpricecolor">
+                    <div><span id="up"></span> <span id="down"></span><span id="precioBTCMove"></span></div>
+                    <div> <span id="precioBTCPercentage"></span></div>
+                </div>
+            </div>
+            <span id="btcShowNotebookBTN"><button class="miholdText" id="btcShowNotebook">NOTAS</button></span>
+
+        </div>
+        </div>
+
+
+        <!-- ADA -->
+
+        <div class="card adacard" id="adacard">
+            <div class="titcross">
+                <p class="card-tit">ADA</p> <button class="btncross" id="btncrossada">X</button>
+            </div>
+            <!-- NOTEBOOK ada -->
+            <div class="adaHoldAddedCARD minicardhide" id="adanotebook">
+                <span id="adaHoldAdded" class="adaHoldAdded"></span>
+                <div>
+                    <div id="localstorage"></div>
+                    <form action="" id="form">
+                        <input class="holdInput" type="text" id="myHold" name="myHold" placeholder="Anotar compra">
+
+                        <button class="addCoinButton" type="submit" value="+" id="addHold"> + </button>
+                    </form>
+                    <button class="miholdText" id="adaShowPrices">PRECIOS</button>
+                </div>
+            </div>
+
+            <div id="adaSTATS">
+                <div class="card-price-cont"><span id="precioADA2"></span></div>
+                <div class="moveBG adapricecolor">
+                    <div><span id="up"></span> <span id="down"></span><span id="precioADAMove"></span></div>
+                    <div> <span id="precioADAPercentage"></span></div>
+                </div>
+            </div>
+
+            <span id="adaShowNotebookBTN"><button class="miholdText" id="adaShowNotebook">NOTAS</button></span>
+        </div>
+
+
+        <!-- MATIC -->
+
+        <div class="card maticcard" id="maticcard">
+            <div class="titcross">
+                <p class="card-tit">MATIC</p> <button class="btncross" id="btncrossmatic">X</button>
+            </div>
+            <!-- NOTEBOOK matic -->
+            <div class="maticHoldAddedCARD minicardhide" id="maticnotebook">
+                <span id="maticHoldAdded" class="maticHoldAdded"></span>
+                <div>
+                    <div id="localstorage"></div>
+                    <form action="" id="form">
+                        <input class="holdInput" type="text" id="myHold" name="myHold" placeholder="Anotar compra">
+
+                        <button class="addCoinButton" type="submit" value="+" id="addHold"> + </button>
+                    </form>
+                    <button class="miholdText" id="maticShowPrices">PRECIOS</button>
+                </div>
+            </div>
+
+            <div id="maticSTATS">
+
+                <div class="card-price-cont"><span id="precioMATIC2"></span></div>
+                <div class="moveBG maticpricecolor">
+                    <div><span id="up"></span> <span id="down"></span><span id="precioMATICMove"></span></div>
+                    <div> <span id="precioMATICPercentage"></span></div>
+                </div>
+            </div>
+            <span id="maticShowNotebookBTN"><button class="miholdText" id="maticShowNotebook">NOTAS</button></span>
+        </div>
+
+
+        <!-- SOLANA -->
+
+        <div class="card solcard" id="solcard">
+            <div class="titcross">
+                <p class="card-tit">SOL</p> <button class="btncross" id="btncrosssol">X</button>
+            </div>
+            <!-- NOTEBOOK sol -->
+            <div class="solHoldAddedCARD minicardhide" id="solnotebook">
+                <span id="solHoldAdded" class="solHoldAdded"></span>
+                <div>
+                    <div id="localstorage"></div>
+                    <form action="" id="form">
+                        <input class="holdInput" type="text" id="myHold" name="myHold" placeholder="Anotar compra">
+
+                        <button class="addCoinButton" type="submit" value="+" id="addHold"> + </button>
+                    </form>
+                    <button class="miholdText" id="solShowPrices">PRECIOS</button>
+                </div>
+            </div>
+
+            <div id="solSTATS">
+
+                <div class="card-price-cont"><span id="precioSOL"></span></div>
+                <div class="moveBG solanapricecolor">
+                    <div><span id="up"></span> <span id="down"></span><span id="precioSOLMove"></span></div>
+                    <div> <span id="precioSOLPercentage"></span></div>
+                </div>
+            </div>
+            <span id="solShowNotebookBTN"><button class="miholdText" id="solShowNotebook">NOTAS</button></span>
+        </div>
+
+        <!-- CAKE -->
+
+        <div class="card cakecard" id="cakecard">
+            <div class="titcross">
+                <p class="card-tit">cake</p> <button class="btncross" id="btncrosscake">X</button>
+            </div>
+            <div class="cakeHoldAddedCARD minicardhide" id="cakenotebook">
+                <span id="cakeHoldAdded" class="cakeHoldAdded"></span>
+                <div>
+                    <div id="localstorage"></div>
+                    <form action="" id="form">
+                        <input class="holdInput" type="text" id="myHold" name="myHold" placeholder="Anotar compra">
+
+                        <button class="addCoinButton" type="submit" value="+" id="addHold"> + </button>
+                    </form>
+                    <button class="miholdText" id="cakeShowPrices">PRECIOS</button>
+                </div>
+            </div>
+
+            <div id="cakeSTATS">
+
+                <div class="card-price-cont"><span id="precioCAKE"></span></div>
+                <div class="moveBG cakepricecolor">
+                    <div><span id="up"></span> <span id="down"></span><span id="precioCAKEMove"></span></div>
+                    <div> <span id="precioCAKEPercentage"></span></div>
+                </div>
+            </div>
+            <span id="cakeShowNotebookBTN"><button class="miholdText" id="cakeShowNotebook">NOTAS</button></span>
+        </div>
+
+
+        <!-- BNB -->
+
+        <div class="card bnbcard" id="bnbcard">
+            <div class="titcross">
+                <p class="card-tit">BNB</p> <button class="btncross" id="btncrossbnb">X</button>
+            </div><!-- NOTEBOOK bnb -->
+            <div class="bnbHoldAddedCARD minicardhide" id="bnbnotebook">
+                <span id="bnbHoldAdded" class="bnbHoldAdded"></span>
+                <div>
+                    <div id="localstorage"></div>
+                    <form action="" id="form">
+                        <input class="holdInput" type="text" id="myHold" name="myHold" placeholder="Anotar compra">
+
+                        <button class="addCoinButton" type="submit" value="+" id="addHold"> + </button>
+                    </form>
+                    <button class="miholdText" id="bnbShowPrices">PRECIOS</button>
+                </div>
+            </div>
+
+            <div id="bnbSTATS">
+                <div class="card-price-cont"><span id="precioBNB"></span></div>
+                <div class="moveBG bnbpricecolor">
+                    <div><span id="up"></span> <span id="down"></span><span id="precioBNBMove"></span></div>
+                    <div> <span id="precioBNBPercentage"></span></div>
+                </div>
+            </div>
+            <span id="bnbShowNotebookBTN"><button class="miholdText" id="bnbShowNotebook">NOTAS</button></span>
+        </div>
+
+
+        <!-- LUNA -->
+
+        <div class="card lunacard" id="lunacard">
+            <div class="titcross">
+                <p class="card-tit">LUNA</p> <button class="btncross" id="btncrossluna">X</button>
+            </div>
+            <!-- NOTEBOOK luna -->
+            <div class="lunaHoldAddedCARD minicardhide" id="lunanotebook">
+                <span id="lunaHoldAdded" class="lunaHoldAdded"></span>
+                <div>
+                    <div id="localstorage"></div>
+                    <form action="" id="form">
+                        <input class="holdInput" type="text" id="myHold" name="myHold" placeholder="Anotar compra">
+
+                        <button class="addCoinButton" type="submit" value="+" id="addHold"> + </button>
+                    </form>
+                    <button class="miholdText" id="lunaShowPrices">PRECIOS</button>
+                </div>
+            </div>
+
+            <div id="lunaSTATS">
+                <div class="card-price-cont"><span id="precioLUNA"></span></div>
+                <div class="moveBG lunapricecolor">
+                    <div><span id="up"></span> <span id="down"></span><span id="precioLUNAMove"></span></div>
+                    <div> <span id="precioLUNAPercentage"></span></div>
+                </div>
+            </div>
+            <span id="lunaShowNotebookBTN"><button class="miholdText" id="lunaShowNotebook">NOTAS</button></span>
+        </div>
+
+        <!-- DOT -->
+
+        <div class="card dotcard" id="dotcard">
+            <div class="titcross">
+                <p class="card-tit">DOT</p> <button class="btncross" id="btncrossdot">X</button>
+            </div><!-- NOTEBOOK dot -->
+            <div class="dotHoldAddedCARD minicardhide" id="dotnotebook">
+                <span id="dotHoldAdded" class="dotHoldAdded"></span>
+                <div>
+                    <div id="localstorage"></div>
+                    <form action="" id="form">
+                        <input class="holdInput" type="text" id="myHold" name="myHold" placeholder="Anotar compra">
+
+                        <button class="addCoinButton" type="submit" value="+" id="addHold"> + </button>
+                    </form>
+                    <button class="miholdText" id="dotShowPrices">PRECIOS</button>
+                </div>
+            </div>
+
+            <div id="dotSTATS">
+                <div class="card-price-cont"><span id="precioDOT"></span></div>
+                <div class="moveBG dotpricecolor">
+                    <div><span id="up"></span> <span id="down"></span><span id="precioDOTMove"></span></div>
+                    <div> <span id="precioDOTPercentage"></span></div>
+                </div>
+            </div>
+
+            <span id="dotShowNotebookBTN"><button class="miholdText" id="dotShowNotebook">NOTAS</button></span>
+        </div>
+
+
+        <!-- ALCX -->
+
+        <div class="card alcxcard" id="alcxcard">
+            <div class="titcross">
+                <p class="card-tit">ALCX</p> <button class="btncross" id="btncrossalcx">X</button>
+            </div>
+            <!-- NOTEBOOK alcx -->
+            <div class="alcxHoldAddedCARD minicardhide" id="alcxnotebook">
+                <span id="alcxHoldAdded" class="alcxHoldAdded"></span>
+                <div>
+                    <div id="localstorage"></div>
+                    <form action="" id="form">
+                        <input class="holdInput" type="text" id="myHold" name="myHold" placeholder="Anotar compra">
+
+                        <button class="addCoinButton" type="submit" value="+" id="addHold"> + </button>
+                    </form>
+                    <button class="miholdText" id="alcxShowPrices">PRECIOS</button>
+                </div>
+            </div>
+
+            <div id="alcxSTATS">
+
+                <div class="card-price-cont"><span id="precioALCX"></span></div>
+                <div class="moveBG alcxpricecolor">
+                    <div><span id="up"></span> <span id="down"></span><span id="precioALCXMove"></span></div>
+                    <div> <span id="precioALCXPercentage"></span></div>
+                </div>
+            </div>
+            <span id="alcxShowNotebookBTN"><button class="miholdText" id="alcxShowNotebook">NOTAS</button></span>
+        </div>
+
+
     </section>
-    
-<!-- 
-    <div style="background-color: red;">
-        <button id="precioETH">PRECIO ETH</button>
-        <div id="divEth"></div>
-    </div> -->
 
-
+    <!-- FORM +
+            <form action="" id="form">
+                <select type="text" id="nombre" name="nombre" onChange="cambiarprecio()"> 
+                    <option value="ETH">ETH</option>
+                    <option value="btc">BTC</option>
+                    <option value="ADA">ADA</option>
+                    <option value="MATIC">MATIC</option>
+                    <option value="CELO">CELO</option>
+                    <option value="DAI">DAI</option>
+                </select>
+                <button class="addCoinButton" type="submit" value="Agregar" id="addCoinButton"> Agregar </button>
+            </form> -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="monedas.js"></script>
+    <script src="animaciones.js"></script>
     <script src="main.js"></script>
     <script src="funciones.js"></script>
+    <div class="nuevoscript">
+
+    </div>
 </body>
+
 </html>

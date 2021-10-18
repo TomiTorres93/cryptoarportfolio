@@ -231,7 +231,7 @@ body {
     border: none;
     color: white;
     background: rgb(56,134,109);
-    height: 1.5rem;
+    height: 1rem;
 
 }
 
@@ -367,11 +367,11 @@ body {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
+    margin: 0 auto;
     padding: 0.3rem;
     width: 75%;
     color: white;
     background-color: nth($color, 1);
-    margin: 0 auto;
     border-radius: 10px;
 
 }
@@ -428,7 +428,59 @@ body {
     @extend %flexbox-row;
 }
 
+.holdForm {
+    @extend %flexbox-row;
+    width: 100%;
+}
 
+.holdInput {
+    width: 70%;
+    border: none;
+    font-size: 0.7rem;
+}
+
+.miholdText {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 1rem auto;
+    padding: 0.3rem;
+    font-size: 0.7rem;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background: rgb(56,134,109);
+    font-weight: 800;
+    width: 30%;
+    height: 1.5rem;
+    text-align: center;
+    transition: 0.3s all;
+
+    &:hover{
+        background: nth($color, 2);
+    }
+    
+}
+
+
+.notes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 0.2rem auto;
+    font-size: 0.7rem;
+    border-radius: 5px;
+    border: none;
+    color: rgb(56,134,109);
+    font-weight: 800;
+    width: 90%;
+    text-align: center;
+
+
+    
+}
 
 .fondoverde {
     animation: changeBG 20s infinite;
@@ -535,4 +587,12 @@ body {
         }
 
 }
+}
+
+.notebook {
+    background-color: rgb(255, 255, 255, 90%);    
+    text-align: center;
+    width: 90%;
+    height: 10rem;
+    border-radius: 25px;
 }

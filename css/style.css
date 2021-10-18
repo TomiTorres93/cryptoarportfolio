@@ -1,5 +1,5 @@
 /* Extends */
-.titcross, .minicard-cont, .row2, .portfolio-sections, .web-body-cards {
+.holdForm, .titcross, .minicard-cont, .row2, .portfolio-sections, .web-body-cards {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -247,7 +247,7 @@ body {
   border: none;
   color: white;
   background: #38866d;
-  height: 1.5rem;
+  height: 1rem;
 }
 
 .livePrice {
@@ -364,11 +364,11 @@ body {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
+  margin: 0 auto;
   padding: 0.3rem;
   width: 75%;
   color: white;
   background-color: #38866d;
-  margin: 0 auto;
   border-radius: 10px;
 }
 
@@ -413,6 +413,53 @@ body {
   position: relative;
   bottom: 1rem;
   cursor: pointer;
+}
+
+.holdForm {
+  width: 100%;
+}
+
+.holdInput {
+  width: 70%;
+  border: none;
+  font-size: 0.7rem;
+}
+
+.miholdText {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 1rem auto;
+  padding: 0.3rem;
+  font-size: 0.7rem;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background: #38866d;
+  font-weight: 800;
+  width: 30%;
+  height: 1.5rem;
+  text-align: center;
+  transition: 0.3s all;
+}
+.miholdText:hover {
+  background: #7ccfb5;
+}
+
+.notes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 0.2rem auto;
+  font-size: 0.7rem;
+  border-radius: 5px;
+  border: none;
+  color: #38866d;
+  font-weight: 800;
+  width: 90%;
+  text-align: center;
 }
 
 .fondoverde {
@@ -493,6 +540,14 @@ body {
   100% {
     background-color: #f0abab;
   }
+}
+
+.notebook {
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  width: 90%;
+  height: 10rem;
+  border-radius: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */

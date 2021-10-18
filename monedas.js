@@ -1,19 +1,16 @@
-class Moneda { 
-    constructor(nombre, precio, holding, usdHolding, pesosHolding) {
-    this.nombre = nombre;
-    this.precio = precio;
-    this.holding = holding;
-    this.usdHolding = usdHolding;
-    this.pesosHolding = pesosHolding;
+class Cryptocurrencie { 
+    constructor(id, name, price, priceChange, pricePercentage, tokenHold, usdHold) {
+    this.id = id;
+    this.name = name;
+    this.price = price;
+    this.priceChange = priceChange;
+    this.pricePercentage = pricePercentage;
+    this.tokenHold = tokenHold;
+    this.usdHold = usdHold;
+}
 
 }
 
-holdCreado() {
-    console.log("Tienes " + this.holding + " de " + this.nombre.toUpperCase() + ". Su precio actual es: USD " + this.precio+ ". Su valor en dólares es: USD" + this.usdHolding + 
-    ". Su valor en pesos es: $ " + this.pesosHolding);
-}
 
 
-
-}
 
