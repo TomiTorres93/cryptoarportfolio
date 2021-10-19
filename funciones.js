@@ -367,9 +367,6 @@ $("#ethHoldAdded").append( `
 
 
 localStorage.setItem("miholdText", JSON.stringify($("#ethTextAdded").html()));
-
-
-
 $("#ethTextAdded").html(localStorage.getItem("miholdText"));
      
 });
