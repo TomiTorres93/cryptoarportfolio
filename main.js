@@ -3,7 +3,7 @@ const ethgas = []
 const currencies = []
 const currenciesPrice24 = []
 const currenciesPCT = []
-
+const ethlocalStorage = []
 
 const ether = []
 const bitcoin = []
@@ -743,66 +743,3 @@ setTimeout(function() {
 ////////////////////////////////////////
 ////////////////////////////////////////
 
-// BOTONES ADD
-
-const form = document.getElementById('form') 
-const addCoinButton = document.getElementById('addCoinButton') 
-
-form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    let formValues = new FormData(e.target);
-    let precioEther = ether[0]
-    var f = new Date();
-    
-   
-    let holdEth = {myHold: formValues.get("myHold")};    
-    form.reset();
-
-    localStorage.setItem("ethHold", JSON.stringify(holdEth));
-
-    myHold.push(holdEth); 
-    
-
-    let myHoldUSD = holdEth.myHold * precioEther;
-    myHold.push(myHoldUSD)
-
-    localStorage.setItem("ethHold", JSON.stringify(myHold));
-
-
- $("#ethHoldAdded").append( `
-    <span class="notes" id="miholdTextAdded"> ${holdEth.myHold} ETH // $${(holdEth.myHold * precioEther).toFixed(2)} // ${f.getDate() + "-"+ (f.getMonth() + 1) + "-" +f.getFullYear()}</span>
-`)    
-
-localStorage.setItem("miholdText", JSON.stringify($("#miholdTextAdded").html()));
-$("#miholdTextAdded").html(localStorage.getItem("miholdText"));
-
-// let ethNote1 = localStorage.setItem("miholdText", JSON.stringify($("#miholdTextAdded").html()));
-
-// ethNotes.push(ethNote1)
-
-;   
-            // let txName = document.getElementById('txName').value;
-            // let newTx = {txName: txName, txInversion: document.getElementByI('txInversion').value, txPrecio: document.getElementById('txPrecio').value, txHoldings: document.getElementById('txHoldings').value, txArs: document.getElementById('txArs').value}
-
-            // const txs = []
-            // console.log(newTx)
-            // txs.push(newTx) ; 
-
-            // localStorage.setItem("txs", JSON.stringify(txs));
-    
-});
-
-
-
-
-
-
-setTimeout(function() {
-    
-let miholdText = localStorage.getItem("miholdText");
-
-console.log(miholdText)
-
-$("#localstorage").append( `
-<span class="notes" id="miholdTextAdded"> ${miholdText}</span>
-`)    }, 100)

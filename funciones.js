@@ -194,16 +194,10 @@ const cakecardcolor = document.querySelector('.cakepricecolor')
 const cakepricecolor = cake[2]
 let cakecolour = colorize24price(cakecardcolor, cakepricecolor)
 
-
-
 //dot
-
 const dotcardcolor = document.querySelector('.dotpricecolor') 
 const dotpricecolor = polkadot[2]
 let dotcolour = colorize24price(dotcardcolor, dotpricecolor)
-
-
-
 
 //luna
 
@@ -330,3 +324,65 @@ const dotnotebook = document.getElementById('dotnotebook')
 const dotSTATS = document.querySelector('#dotSTATS') 
 let dotShowNB = showNotebook(dotShowNotebook, dotSTATS, dotShowNotebookBTN, dotnotebook)
 let dotShowPP = showPrices(dotShowPrices, dotSTATS, dotShowNotebookBTN, dotnotebook)
+
+
+
+
+
+// BOTONES ADD
+
+const form = document.getElementById('form') 
+const addCoinButton = document.getElementById('addCoinButton') 
+
+
+
+
+
+
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    let formValues = new FormData(e.target);
+    let precioEther = ether[0]
+    var f = new Date();
+    let holdEth = {myHold: formValues.get("myHold")};  
+
+    form.reset();
+
+    localStorage.setItem("ethHold", JSON.stringify(holdEth));
+
+    myHold.push(holdEth); 
+    
+
+    let myHoldUSD = holdEth.myHold * precioEther;
+    myHold.push(myHoldUSD)
+
+    localStorage.setItem("ethHold", JSON.stringify(myHold));
+
+
+
+$("#ethHoldAdded").append( `
+    <span class="notes" id="ethTextAdded">${holdEth.myHold} ETH ♦ $${(holdEth.myHold * precioEther).toFixed(2)} ♦ ${f.getDate() + "/"+ (f.getMonth() + 1) + "/" +f.getFullYear()}</span>
+`)    
+
+
+localStorage.setItem("miholdText", JSON.stringify($("#ethTextAdded").html()));
+
+
+
+$("#ethTextAdded").html(localStorage.getItem("miholdText"));
+     
+});
+
+
+setTimeout(function() {
+    
+let miholdText = localStorage.getItem("miholdText");
+
+console.log(miholdText)
+
+
+$("#localstorage").append( `
+<span class="notes"> ${miholdText}</span>
+`)   
+}, 100)
