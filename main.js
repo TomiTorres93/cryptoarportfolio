@@ -18,6 +18,15 @@ const alchemix = []
 
 const myHold = []
 const ethNotes = []
+const myHoldbtc = []
+const myHoldada = []
+const myHoldsol = []
+const myHoldluna = []
+const myHoldcake = []
+const myHoldmatic = []
+const myHoldbnb = []
+const myHoldalcx = []
+const myHolddot = []
 
 
 // COTIZACIONES
